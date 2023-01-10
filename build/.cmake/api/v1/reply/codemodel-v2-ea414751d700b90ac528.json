@@ -1,0 +1,797 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74
+					]
+				},
+				{
+					"build" : "libsponge",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libsponge",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "apps",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps",
+					"targetIndexes" : 
+					[
+						75
+					]
+				},
+				{
+					"build" : "tests",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						20
+					]
+				},
+				{
+					"build" : "doctests",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "doctests",
+					"targetIndexes" : 
+					[
+						0,
+						17,
+						18
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "Sponge",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "address_dt::@72ccb64eab70e6493db5",
+					"jsonFile" : "target-address_dt-Debug-bb512ab5435b169c79cc.json",
+					"name" : "address_dt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "byte_stream_capacity::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-byte_stream_capacity-Debug-daf887889be3da95ec70.json",
+					"name" : "byte_stream_capacity",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "byte_stream_construction::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-byte_stream_construction-Debug-8673f278331be6875b70.json",
+					"name" : "byte_stream_construction",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "byte_stream_many_writes::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-byte_stream_many_writes-Debug-d28ce55827b0e08d52d2.json",
+					"name" : "byte_stream_many_writes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "byte_stream_one_write::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-byte_stream_one_write-Debug-cb0fd74dfa2a44a7c6d8.json",
+					"name" : "byte_stream_one_write",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "byte_stream_two_writes::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-byte_stream_two_writes-Debug-16d52edbe6cefaf38701.json",
+					"name" : "byte_stream_two_writes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check-Debug-f9ef17e0580d18de9602.json",
+					"name" : "check",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab0::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab0-Debug-1cc91eb060c25bd1dd9f.json",
+					"name" : "check_lab0",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab1-Debug-fde01af592d3f2b5ac7c.json",
+					"name" : "check_lab1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab2-Debug-8524c522aa12240c74b6.json",
+					"name" : "check_lab2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab3-Debug-f33c3a113fe262dd6254.json",
+					"name" : "check_lab3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab4-Debug-3570324db958ee2d8743.json",
+					"name" : "check_lab4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab5-Debug-def4a3192f9d9151b780.json",
+					"name" : "check_lab5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_lab6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_lab6-Debug-a0cf8a20fb37a9360026.json",
+					"name" : "check_lab6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check_webget::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check_webget-Debug-cb8d6fa8f2a140f156e0.json",
+					"name" : "check_webget",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc-Debug-ab7e7a8c5cafbba7d266.json",
+					"name" : "doc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "format::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-format-Debug-a4dfccc23098193ee272.json",
+					"name" : "format",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "parser_dt::@72ccb64eab70e6493db5",
+					"jsonFile" : "target-parser_dt-Debug-e437c38c1eb079b83e0f.json",
+					"name" : "parser_dt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "socket_dt::@72ccb64eab70e6493db5",
+					"jsonFile" : "target-socket_dt-Debug-b23e58cebad5e88b7c8e.json",
+					"name" : "socket_dt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sponge::@a8e6c790d0258cd30bbf",
+					"jsonFile" : "target-sponge-Debug-ad6d3cebc922325b609a.json",
+					"name" : "sponge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "spongechecks::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-spongechecks-Debug-b8d1ef65c424a0aec133.json",
+					"name" : "spongechecks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy-Debug-d364dec34013e91bd566.json",
+					"name" : "tidy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_apps__webget.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_apps__webget.cc-Debug-790e41597cbb0efc23cf.json",
+					"name" : "tidy_apps__webget.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__address_dt.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__address_dt.cc-Debug-90288b1df0b1f610cdd3.json",
+					"name" : "tidy_doctests__address_dt.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__address_example_1.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__address_example_1.cc-Debug-7f502bacbd1eed5685fe.json",
+					"name" : "tidy_doctests__address_example_1.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__address_example_2.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__address_example_2.cc-Debug-6fa24cdd3d0183325fa4.json",
+					"name" : "tidy_doctests__address_example_2.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__address_example_3.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__address_example_3.cc-Debug-6ab3b3f900ff84e08e0b.json",
+					"name" : "tidy_doctests__address_example_3.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__parser_dt.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__parser_dt.cc-Debug-01922f61fc3fd6350379.json",
+					"name" : "tidy_doctests__parser_dt.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__parser_example.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__parser_example.cc-Debug-259d1d0b6ea966b91e32.json",
+					"name" : "tidy_doctests__parser_example.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__socket_dt.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__socket_dt.cc-Debug-6232baa19a95cedd34cf.json",
+					"name" : "tidy_doctests__socket_dt.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__socket_example_1.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__socket_example_1.cc-Debug-e30cd9964b5e08a875af.json",
+					"name" : "tidy_doctests__socket_example_1.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__socket_example_2.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__socket_example_2.cc-Debug-98e460412639edca95d0.json",
+					"name" : "tidy_doctests__socket_example_2.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_doctests__socket_example_3.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_doctests__socket_example_3.cc-Debug-e839398c4a02476067a1.json",
+					"name" : "tidy_doctests__socket_example_3.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_libsponge__byte_stream.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_libsponge__byte_stream.cc-Debug-6f99ff8434f880b5998e.json",
+					"name" : "tidy_libsponge__byte_stream.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_apps__webget.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_apps__webget.cc-Debug-0c70fdcc84fd926d39b8.json",
+					"name" : "tidy_quiet_apps__webget.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__address_dt.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__address_dt.cc-Debug-f9a5e1131d855a782a28.json",
+					"name" : "tidy_quiet_doctests__address_dt.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__address_example_1.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__address_example_1.cc-Debug-965636ea9e763fd11328.json",
+					"name" : "tidy_quiet_doctests__address_example_1.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__address_example_2.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__address_example_2.cc-Debug-62a2b8b40e7e3b864263.json",
+					"name" : "tidy_quiet_doctests__address_example_2.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__address_example_3.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__address_example_3.cc-Debug-a44f52e0064ef3120df8.json",
+					"name" : "tidy_quiet_doctests__address_example_3.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__parser_dt.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__parser_dt.cc-Debug-7cd7f110854e1deaa71b.json",
+					"name" : "tidy_quiet_doctests__parser_dt.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__parser_example.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__parser_example.cc-Debug-232431daa2f00cc2baf0.json",
+					"name" : "tidy_quiet_doctests__parser_example.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__socket_dt.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__socket_dt.cc-Debug-1fa72b1c1c99a3d38e6b.json",
+					"name" : "tidy_quiet_doctests__socket_dt.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__socket_example_1.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__socket_example_1.cc-Debug-80759772dbf4f26b27d4.json",
+					"name" : "tidy_quiet_doctests__socket_example_1.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__socket_example_2.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__socket_example_2.cc-Debug-030301a7623cb618d9ea.json",
+					"name" : "tidy_quiet_doctests__socket_example_2.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_doctests__socket_example_3.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_doctests__socket_example_3.cc-Debug-25b0f091c47a078f31f0.json",
+					"name" : "tidy_quiet_doctests__socket_example_3.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_libsponge__byte_stream.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_libsponge__byte_stream.cc-Debug-20e96cd2e92952199fe5.json",
+					"name" : "tidy_quiet_libsponge__byte_stream.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_tests__byte_stream_capacity.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_tests__byte_stream_capacity.cc-Debug-d84e4844a1558ee073e0.json",
+					"name" : "tidy_quiet_tests__byte_stream_capacity.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_tests__byte_stream_construction.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_tests__byte_stream_construction.cc-Debug-55f2a75978d2c2c7e1e0.json",
+					"name" : "tidy_quiet_tests__byte_stream_construction.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_tests__byte_stream_many_writes.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_tests__byte_stream_many_writes.cc-Debug-c588f185cf3b4082ac55.json",
+					"name" : "tidy_quiet_tests__byte_stream_many_writes.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_tests__byte_stream_one_write.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_tests__byte_stream_one_write.cc-Debug-ad22c063c238f92d5fe5.json",
+					"name" : "tidy_quiet_tests__byte_stream_one_write.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_tests__byte_stream_test_harness.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_tests__byte_stream_test_harness.cc-Debug-1d9c48a074c149eb5145.json",
+					"name" : "tidy_quiet_tests__byte_stream_test_harness.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_tests__byte_stream_two_writes.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_tests__byte_stream_two_writes.cc-Debug-d7e2f91a29029681e228.json",
+					"name" : "tidy_quiet_tests__byte_stream_two_writes.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__address.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__address.cc-Debug-b477edfaf2484a4c2577.json",
+					"name" : "tidy_quiet_util__address.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__buffer.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__buffer.cc-Debug-2ffde684b009e6cf2be2.json",
+					"name" : "tidy_quiet_util__buffer.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__eventloop.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__eventloop.cc-Debug-592b1f7d0c4e7502f84b.json",
+					"name" : "tidy_quiet_util__eventloop.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__file_descriptor.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__file_descriptor.cc-Debug-8fb35161162425b2c430.json",
+					"name" : "tidy_quiet_util__file_descriptor.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__parser.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__parser.cc-Debug-86994efca92c2590424a.json",
+					"name" : "tidy_quiet_util__parser.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__socket.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__socket.cc-Debug-343e964ee3c354cf5ade.json",
+					"name" : "tidy_quiet_util__socket.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__tun.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__tun.cc-Debug-9a10c7a7cbce3bbc5872.json",
+					"name" : "tidy_quiet_util__tun.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_quiet_util__util.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_quiet_util__util.cc-Debug-2d041588dc9f3de65a7f.json",
+					"name" : "tidy_quiet_util__util.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_tests__byte_stream_capacity.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_tests__byte_stream_capacity.cc-Debug-9e792f4281169b3b3fa8.json",
+					"name" : "tidy_tests__byte_stream_capacity.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_tests__byte_stream_construction.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_tests__byte_stream_construction.cc-Debug-82acbe11f3324f1016d8.json",
+					"name" : "tidy_tests__byte_stream_construction.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_tests__byte_stream_many_writes.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_tests__byte_stream_many_writes.cc-Debug-8a063661842a9e90fadb.json",
+					"name" : "tidy_tests__byte_stream_many_writes.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_tests__byte_stream_one_write.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_tests__byte_stream_one_write.cc-Debug-d739b29b9c306e959996.json",
+					"name" : "tidy_tests__byte_stream_one_write.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_tests__byte_stream_test_harness.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_tests__byte_stream_test_harness.cc-Debug-3af8983f5979effc4377.json",
+					"name" : "tidy_tests__byte_stream_test_harness.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_tests__byte_stream_two_writes.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_tests__byte_stream_two_writes.cc-Debug-6416dabb9b6abc2a1b12.json",
+					"name" : "tidy_tests__byte_stream_two_writes.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__address.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__address.cc-Debug-801313eda20be643ea8f.json",
+					"name" : "tidy_util__address.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__buffer.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__buffer.cc-Debug-b1f783e5ae8e9efde504.json",
+					"name" : "tidy_util__buffer.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__eventloop.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__eventloop.cc-Debug-024600bdc7f92cecf3f0.json",
+					"name" : "tidy_util__eventloop.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__file_descriptor.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__file_descriptor.cc-Debug-8e8ebf07e514031944fe.json",
+					"name" : "tidy_util__file_descriptor.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__parser.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__parser.cc-Debug-25b4943e692ae6e93b9c.json",
+					"name" : "tidy_util__parser.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__socket.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__socket.cc-Debug-8dea3debc4829efbc4aa.json",
+					"name" : "tidy_util__socket.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__tun.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__tun.cc-Debug-b3470514e00347fbbeda.json",
+					"name" : "tidy_util__tun.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_util__util.cc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_util__util.cc-Debug-fff5655cc4e8e3ad23b6.json",
+					"name" : "tidy_util__util.cc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tidy_verbose::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tidy_verbose-Debug-79b4461114b8bb46d63c.json",
+					"name" : "tidy_verbose",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "webget::@9e189ee61a034fc9b705",
+					"jsonFile" : "target-webget-Debug-9fc090d18dd530590501.json",
+					"name" : "webget",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/nagomi/mymuduo/build",
+		"source" : "/home/nagomi/.local/share/Trash/files/sponge"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
