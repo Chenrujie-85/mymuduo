@@ -48,13 +48,59 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nagomi/.local/share/Trash/files/sponge
+CMAKE_SOURCE_DIR = /home/nagomi/mymuduo
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/nagomi/mymuduo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,17 +123,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,992 +157,476 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named check
+# Target rules for targets named mymuduo
 
 # Build rule for target.
-check: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check
-.PHONY : check
+mymuduo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mymuduo
+.PHONY : mymuduo
 
 # fast build rule for target.
-check/fast:
-	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/build
-.PHONY : check/fast
+mymuduo/fast:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/build
+.PHONY : mymuduo/fast
 
-#=============================================================================
-# Target rules for targets named check_lab6
+src/Acceptor.o: src/Acceptor.cpp.o
 
-# Build rule for target.
-check_lab6: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab6
-.PHONY : check_lab6
-
-# fast build rule for target.
-check_lab6/fast:
-	$(MAKE) -f CMakeFiles/check_lab6.dir/build.make CMakeFiles/check_lab6.dir/build
-.PHONY : check_lab6/fast
-
-#=============================================================================
-# Target rules for targets named check_lab5
-
-# Build rule for target.
-check_lab5: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab5
-.PHONY : check_lab5
-
-# fast build rule for target.
-check_lab5/fast:
-	$(MAKE) -f CMakeFiles/check_lab5.dir/build.make CMakeFiles/check_lab5.dir/build
-.PHONY : check_lab5/fast
-
-#=============================================================================
-# Target rules for targets named check_lab4
-
-# Build rule for target.
-check_lab4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab4
-.PHONY : check_lab4
-
-# fast build rule for target.
-check_lab4/fast:
-	$(MAKE) -f CMakeFiles/check_lab4.dir/build.make CMakeFiles/check_lab4.dir/build
-.PHONY : check_lab4/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__buffer.cc
-
-# Build rule for target.
-tidy_quiet_util__buffer.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__buffer.cc
-.PHONY : tidy_quiet_util__buffer.cc
-
-# fast build rule for target.
-tidy_quiet_util__buffer.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__buffer.cc.dir/build.make CMakeFiles/tidy_quiet_util__buffer.cc.dir/build
-.PHONY : tidy_quiet_util__buffer.cc/fast
-
-#=============================================================================
-# Target rules for targets named check_lab0
-
-# Build rule for target.
-check_lab0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab0
-.PHONY : check_lab0
-
-# fast build rule for target.
-check_lab0/fast:
-	$(MAKE) -f CMakeFiles/check_lab0.dir/build.make CMakeFiles/check_lab0.dir/build
-.PHONY : check_lab0/fast
-
-#=============================================================================
-# Target rules for targets named tidy_libsponge__byte_stream.cc
-
-# Build rule for target.
-tidy_libsponge__byte_stream.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_libsponge__byte_stream.cc
-.PHONY : tidy_libsponge__byte_stream.cc
-
-# fast build rule for target.
-tidy_libsponge__byte_stream.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_libsponge__byte_stream.cc.dir/build.make CMakeFiles/tidy_libsponge__byte_stream.cc.dir/build
-.PHONY : tidy_libsponge__byte_stream.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__parser_dt.cc
-
-# Build rule for target.
-tidy_quiet_doctests__parser_dt.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__parser_dt.cc
-.PHONY : tidy_quiet_doctests__parser_dt.cc
-
-# fast build rule for target.
-tidy_quiet_doctests__parser_dt.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__parser_dt.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__parser_dt.cc.dir/build
-.PHONY : tidy_quiet_doctests__parser_dt.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_libsponge__byte_stream.cc
-
-# Build rule for target.
-tidy_quiet_libsponge__byte_stream.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_libsponge__byte_stream.cc
-.PHONY : tidy_quiet_libsponge__byte_stream.cc
-
-# fast build rule for target.
-tidy_quiet_libsponge__byte_stream.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_libsponge__byte_stream.cc.dir/build.make CMakeFiles/tidy_quiet_libsponge__byte_stream.cc.dir/build
-.PHONY : tidy_quiet_libsponge__byte_stream.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_tests__byte_stream_one_write.cc
-
-# Build rule for target.
-tidy_tests__byte_stream_one_write.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_tests__byte_stream_one_write.cc
-.PHONY : tidy_tests__byte_stream_one_write.cc
-
-# fast build rule for target.
-tidy_tests__byte_stream_one_write.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_tests__byte_stream_one_write.cc.dir/build.make CMakeFiles/tidy_tests__byte_stream_one_write.cc.dir/build
-.PHONY : tidy_tests__byte_stream_one_write.cc/fast
-
-#=============================================================================
-# Target rules for targets named check_lab2
-
-# Build rule for target.
-check_lab2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab2
-.PHONY : check_lab2
-
-# fast build rule for target.
-check_lab2/fast:
-	$(MAKE) -f CMakeFiles/check_lab2.dir/build.make CMakeFiles/check_lab2.dir/build
-.PHONY : check_lab2/fast
-
-#=============================================================================
-# Target rules for targets named tidy_doctests__socket_example_3.cc
-
-# Build rule for target.
-tidy_doctests__socket_example_3.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__socket_example_3.cc
-.PHONY : tidy_doctests__socket_example_3.cc
-
-# fast build rule for target.
-tidy_doctests__socket_example_3.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__socket_example_3.cc.dir/build.make CMakeFiles/tidy_doctests__socket_example_3.cc.dir/build
-.PHONY : tidy_doctests__socket_example_3.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__socket_example_3.cc
-
-# Build rule for target.
-tidy_quiet_doctests__socket_example_3.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__socket_example_3.cc
-.PHONY : tidy_quiet_doctests__socket_example_3.cc
-
-# fast build rule for target.
-tidy_quiet_doctests__socket_example_3.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__socket_example_3.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__socket_example_3.cc.dir/build
-.PHONY : tidy_quiet_doctests__socket_example_3.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__socket_example_2.cc
-
-# Build rule for target.
-tidy_quiet_doctests__socket_example_2.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__socket_example_2.cc
-.PHONY : tidy_quiet_doctests__socket_example_2.cc
-
-# fast build rule for target.
-tidy_quiet_doctests__socket_example_2.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__socket_example_2.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__socket_example_2.cc.dir/build
-.PHONY : tidy_quiet_doctests__socket_example_2.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__file_descriptor.cc
-
-# Build rule for target.
-tidy_quiet_util__file_descriptor.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__file_descriptor.cc
-.PHONY : tidy_quiet_util__file_descriptor.cc
-
-# fast build rule for target.
-tidy_quiet_util__file_descriptor.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__file_descriptor.cc.dir/build.make CMakeFiles/tidy_quiet_util__file_descriptor.cc.dir/build
-.PHONY : tidy_quiet_util__file_descriptor.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_tests__byte_stream_construction.cc
-
-# Build rule for target.
-tidy_tests__byte_stream_construction.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_tests__byte_stream_construction.cc
-.PHONY : tidy_tests__byte_stream_construction.cc
-
-# fast build rule for target.
-tidy_tests__byte_stream_construction.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_tests__byte_stream_construction.cc.dir/build.make CMakeFiles/tidy_tests__byte_stream_construction.cc.dir/build
-.PHONY : tidy_tests__byte_stream_construction.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_util__util.cc
-
-# Build rule for target.
-tidy_util__util.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__util.cc
-.PHONY : tidy_util__util.cc
-
-# fast build rule for target.
-tidy_util__util.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__util.cc.dir/build.make CMakeFiles/tidy_util__util.cc.dir/build
-.PHONY : tidy_util__util.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_doctests__socket_dt.cc
-
-# Build rule for target.
-tidy_doctests__socket_dt.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__socket_dt.cc
-.PHONY : tidy_doctests__socket_dt.cc
-
-# fast build rule for target.
-tidy_doctests__socket_dt.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__socket_dt.cc.dir/build.make CMakeFiles/tidy_doctests__socket_dt.cc.dir/build
-.PHONY : tidy_doctests__socket_dt.cc/fast
-
-#=============================================================================
-# Target rules for targets named doc
-
-# Build rule for target.
-doc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doc
-.PHONY : doc
-
-# fast build rule for target.
-doc/fast:
-	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
-.PHONY : doc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_doctests__address_example_1.cc
-
-# Build rule for target.
-tidy_doctests__address_example_1.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__address_example_1.cc
-.PHONY : tidy_doctests__address_example_1.cc
-
-# fast build rule for target.
-tidy_doctests__address_example_1.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__address_example_1.cc.dir/build.make CMakeFiles/tidy_doctests__address_example_1.cc.dir/build
-.PHONY : tidy_doctests__address_example_1.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_doctests__socket_example_2.cc
-
-# Build rule for target.
-tidy_doctests__socket_example_2.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__socket_example_2.cc
-.PHONY : tidy_doctests__socket_example_2.cc
-
-# fast build rule for target.
-tidy_doctests__socket_example_2.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__socket_example_2.cc.dir/build.make CMakeFiles/tidy_doctests__socket_example_2.cc.dir/build
-.PHONY : tidy_doctests__socket_example_2.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_doctests__address_example_2.cc
-
-# Build rule for target.
-tidy_doctests__address_example_2.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__address_example_2.cc
-.PHONY : tidy_doctests__address_example_2.cc
-
-# fast build rule for target.
-tidy_doctests__address_example_2.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__address_example_2.cc.dir/build.make CMakeFiles/tidy_doctests__address_example_2.cc.dir/build
-.PHONY : tidy_doctests__address_example_2.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_tests__byte_stream_capacity.cc
-
-# Build rule for target.
-tidy_quiet_tests__byte_stream_capacity.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_tests__byte_stream_capacity.cc
-.PHONY : tidy_quiet_tests__byte_stream_capacity.cc
-
-# fast build rule for target.
-tidy_quiet_tests__byte_stream_capacity.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_tests__byte_stream_capacity.cc.dir/build.make CMakeFiles/tidy_quiet_tests__byte_stream_capacity.cc.dir/build
-.PHONY : tidy_quiet_tests__byte_stream_capacity.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__socket_dt.cc
-
-# Build rule for target.
-tidy_quiet_doctests__socket_dt.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__socket_dt.cc
-.PHONY : tidy_quiet_doctests__socket_dt.cc
+.PHONY : src/Acceptor.o
 
-# fast build rule for target.
-tidy_quiet_doctests__socket_dt.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__socket_dt.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__socket_dt.cc.dir/build
-.PHONY : tidy_quiet_doctests__socket_dt.cc/fast
-
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__parser_example.cc
-
-# Build rule for target.
-tidy_quiet_doctests__parser_example.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__parser_example.cc
-.PHONY : tidy_quiet_doctests__parser_example.cc
-
-# fast build rule for target.
-tidy_quiet_doctests__parser_example.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__parser_example.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__parser_example.cc.dir/build
-.PHONY : tidy_quiet_doctests__parser_example.cc/fast
+# target to build an object file
+src/Acceptor.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o
+.PHONY : src/Acceptor.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_apps__webget.cc
+src/Acceptor.i: src/Acceptor.cpp.i
 
-# Build rule for target.
-tidy_quiet_apps__webget.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_apps__webget.cc
-.PHONY : tidy_quiet_apps__webget.cc
-
-# fast build rule for target.
-tidy_quiet_apps__webget.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_apps__webget.cc.dir/build.make CMakeFiles/tidy_quiet_apps__webget.cc.dir/build
-.PHONY : tidy_quiet_apps__webget.cc/fast
+.PHONY : src/Acceptor.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__address_example_2.cc
-
-# Build rule for target.
-tidy_quiet_doctests__address_example_2.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__address_example_2.cc
-.PHONY : tidy_quiet_doctests__address_example_2.cc
-
-# fast build rule for target.
-tidy_quiet_doctests__address_example_2.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__address_example_2.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__address_example_2.cc.dir/build
-.PHONY : tidy_quiet_doctests__address_example_2.cc/fast
+# target to preprocess a source file
+src/Acceptor.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Acceptor.cpp.i
+.PHONY : src/Acceptor.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_util__address.cc
+src/Acceptor.s: src/Acceptor.cpp.s
 
-# Build rule for target.
-tidy_util__address.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__address.cc
-.PHONY : tidy_util__address.cc
+.PHONY : src/Acceptor.s
 
-# fast build rule for target.
-tidy_util__address.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__address.cc.dir/build.make CMakeFiles/tidy_util__address.cc.dir/build
-.PHONY : tidy_util__address.cc/fast
+# target to generate assembly for a file
+src/Acceptor.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Acceptor.cpp.s
+.PHONY : src/Acceptor.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_apps__webget.cc
+src/Buffer.o: src/Buffer.cpp.o
 
-# Build rule for target.
-tidy_apps__webget.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_apps__webget.cc
-.PHONY : tidy_apps__webget.cc
+.PHONY : src/Buffer.o
 
-# fast build rule for target.
-tidy_apps__webget.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_apps__webget.cc.dir/build.make CMakeFiles/tidy_apps__webget.cc.dir/build
-.PHONY : tidy_apps__webget.cc/fast
+# target to build an object file
+src/Buffer.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Buffer.cpp.o
+.PHONY : src/Buffer.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__address_dt.cc
+src/Buffer.i: src/Buffer.cpp.i
 
-# Build rule for target.
-tidy_quiet_doctests__address_dt.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__address_dt.cc
-.PHONY : tidy_quiet_doctests__address_dt.cc
+.PHONY : src/Buffer.i
 
-# fast build rule for target.
-tidy_quiet_doctests__address_dt.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__address_dt.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__address_dt.cc.dir/build
-.PHONY : tidy_quiet_doctests__address_dt.cc/fast
+# target to preprocess a source file
+src/Buffer.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Buffer.cpp.i
+.PHONY : src/Buffer.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__address_example_1.cc
+src/Buffer.s: src/Buffer.cpp.s
 
-# Build rule for target.
-tidy_quiet_doctests__address_example_1.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__address_example_1.cc
-.PHONY : tidy_quiet_doctests__address_example_1.cc
+.PHONY : src/Buffer.s
 
-# fast build rule for target.
-tidy_quiet_doctests__address_example_1.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__address_example_1.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__address_example_1.cc.dir/build
-.PHONY : tidy_quiet_doctests__address_example_1.cc/fast
+# target to generate assembly for a file
+src/Buffer.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Buffer.cpp.s
+.PHONY : src/Buffer.cpp.s
 
-#=============================================================================
-# Target rules for targets named check_lab3
+src/Channel.o: src/Channel.cpp.o
 
-# Build rule for target.
-check_lab3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab3
-.PHONY : check_lab3
+.PHONY : src/Channel.o
 
-# fast build rule for target.
-check_lab3/fast:
-	$(MAKE) -f CMakeFiles/check_lab3.dir/build.make CMakeFiles/check_lab3.dir/build
-.PHONY : check_lab3/fast
+# target to build an object file
+src/Channel.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Channel.cpp.o
+.PHONY : src/Channel.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_doctests__address_dt.cc
+src/Channel.i: src/Channel.cpp.i
 
-# Build rule for target.
-tidy_doctests__address_dt.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__address_dt.cc
-.PHONY : tidy_doctests__address_dt.cc
+.PHONY : src/Channel.i
 
-# fast build rule for target.
-tidy_doctests__address_dt.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__address_dt.cc.dir/build.make CMakeFiles/tidy_doctests__address_dt.cc.dir/build
-.PHONY : tidy_doctests__address_dt.cc/fast
+# target to preprocess a source file
+src/Channel.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Channel.cpp.i
+.PHONY : src/Channel.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_doctests__parser_dt.cc
+src/Channel.s: src/Channel.cpp.s
 
-# Build rule for target.
-tidy_doctests__parser_dt.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__parser_dt.cc
-.PHONY : tidy_doctests__parser_dt.cc
+.PHONY : src/Channel.s
 
-# fast build rule for target.
-tidy_doctests__parser_dt.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__parser_dt.cc.dir/build.make CMakeFiles/tidy_doctests__parser_dt.cc.dir/build
-.PHONY : tidy_doctests__parser_dt.cc/fast
+# target to generate assembly for a file
+src/Channel.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Channel.cpp.s
+.PHONY : src/Channel.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__socket_example_1.cc
+src/CurrentThread.o: src/CurrentThread.cpp.o
 
-# Build rule for target.
-tidy_quiet_doctests__socket_example_1.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__socket_example_1.cc
-.PHONY : tidy_quiet_doctests__socket_example_1.cc
+.PHONY : src/CurrentThread.o
 
-# fast build rule for target.
-tidy_quiet_doctests__socket_example_1.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__socket_example_1.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__socket_example_1.cc.dir/build
-.PHONY : tidy_quiet_doctests__socket_example_1.cc/fast
+# target to build an object file
+src/CurrentThread.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.o
+.PHONY : src/CurrentThread.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__address.cc
+src/CurrentThread.i: src/CurrentThread.cpp.i
 
-# Build rule for target.
-tidy_quiet_util__address.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__address.cc
-.PHONY : tidy_quiet_util__address.cc
+.PHONY : src/CurrentThread.i
 
-# fast build rule for target.
-tidy_quiet_util__address.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__address.cc.dir/build.make CMakeFiles/tidy_quiet_util__address.cc.dir/build
-.PHONY : tidy_quiet_util__address.cc/fast
+# target to preprocess a source file
+src/CurrentThread.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.i
+.PHONY : src/CurrentThread.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_doctests__address_example_3.cc
+src/CurrentThread.s: src/CurrentThread.cpp.s
 
-# Build rule for target.
-tidy_doctests__address_example_3.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__address_example_3.cc
-.PHONY : tidy_doctests__address_example_3.cc
+.PHONY : src/CurrentThread.s
 
-# fast build rule for target.
-tidy_doctests__address_example_3.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__address_example_3.cc.dir/build.make CMakeFiles/tidy_doctests__address_example_3.cc.dir/build
-.PHONY : tidy_doctests__address_example_3.cc/fast
+# target to generate assembly for a file
+src/CurrentThread.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.s
+.PHONY : src/CurrentThread.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_doctests__address_example_3.cc
+src/DefaultPoller.o: src/DefaultPoller.cpp.o
 
-# Build rule for target.
-tidy_quiet_doctests__address_example_3.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_doctests__address_example_3.cc
-.PHONY : tidy_quiet_doctests__address_example_3.cc
+.PHONY : src/DefaultPoller.o
 
-# fast build rule for target.
-tidy_quiet_doctests__address_example_3.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_doctests__address_example_3.cc.dir/build.make CMakeFiles/tidy_quiet_doctests__address_example_3.cc.dir/build
-.PHONY : tidy_quiet_doctests__address_example_3.cc/fast
+# target to build an object file
+src/DefaultPoller.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o
+.PHONY : src/DefaultPoller.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__eventloop.cc
+src/DefaultPoller.i: src/DefaultPoller.cpp.i
 
-# Build rule for target.
-tidy_quiet_util__eventloop.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__eventloop.cc
-.PHONY : tidy_quiet_util__eventloop.cc
+.PHONY : src/DefaultPoller.i
 
-# fast build rule for target.
-tidy_quiet_util__eventloop.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__eventloop.cc.dir/build.make CMakeFiles/tidy_quiet_util__eventloop.cc.dir/build
-.PHONY : tidy_quiet_util__eventloop.cc/fast
+# target to preprocess a source file
+src/DefaultPoller.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.i
+.PHONY : src/DefaultPoller.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_util__eventloop.cc
+src/DefaultPoller.s: src/DefaultPoller.cpp.s
 
-# Build rule for target.
-tidy_util__eventloop.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__eventloop.cc
-.PHONY : tidy_util__eventloop.cc
+.PHONY : src/DefaultPoller.s
 
-# fast build rule for target.
-tidy_util__eventloop.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__eventloop.cc.dir/build.make CMakeFiles/tidy_util__eventloop.cc.dir/build
-.PHONY : tidy_util__eventloop.cc/fast
+# target to generate assembly for a file
+src/DefaultPoller.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.s
+.PHONY : src/DefaultPoller.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__parser.cc
+src/EpollPoller.o: src/EpollPoller.cpp.o
 
-# Build rule for target.
-tidy_quiet_util__parser.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__parser.cc
-.PHONY : tidy_quiet_util__parser.cc
+.PHONY : src/EpollPoller.o
 
-# fast build rule for target.
-tidy_quiet_util__parser.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__parser.cc.dir/build.make CMakeFiles/tidy_quiet_util__parser.cc.dir/build
-.PHONY : tidy_quiet_util__parser.cc/fast
+# target to build an object file
+src/EpollPoller.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o
+.PHONY : src/EpollPoller.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_util__parser.cc
+src/EpollPoller.i: src/EpollPoller.cpp.i
 
-# Build rule for target.
-tidy_util__parser.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__parser.cc
-.PHONY : tidy_util__parser.cc
+.PHONY : src/EpollPoller.i
 
-# fast build rule for target.
-tidy_util__parser.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__parser.cc.dir/build.make CMakeFiles/tidy_util__parser.cc.dir/build
-.PHONY : tidy_util__parser.cc/fast
+# target to preprocess a source file
+src/EpollPoller.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.i
+.PHONY : src/EpollPoller.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__socket.cc
+src/EpollPoller.s: src/EpollPoller.cpp.s
 
-# Build rule for target.
-tidy_quiet_util__socket.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__socket.cc
-.PHONY : tidy_quiet_util__socket.cc
+.PHONY : src/EpollPoller.s
 
-# fast build rule for target.
-tidy_quiet_util__socket.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__socket.cc.dir/build.make CMakeFiles/tidy_quiet_util__socket.cc.dir/build
-.PHONY : tidy_quiet_util__socket.cc/fast
+# target to generate assembly for a file
+src/EpollPoller.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.s
+.PHONY : src/EpollPoller.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_util__socket.cc
+src/EventLoop.o: src/EventLoop.cpp.o
 
-# Build rule for target.
-tidy_util__socket.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__socket.cc
-.PHONY : tidy_util__socket.cc
+.PHONY : src/EventLoop.o
 
-# fast build rule for target.
-tidy_util__socket.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__socket.cc.dir/build.make CMakeFiles/tidy_util__socket.cc.dir/build
-.PHONY : tidy_util__socket.cc/fast
+# target to build an object file
+src/EventLoop.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o
+.PHONY : src/EventLoop.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_tests__byte_stream_two_writes.cc
+src/EventLoop.i: src/EventLoop.cpp.i
 
-# Build rule for target.
-tidy_tests__byte_stream_two_writes.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_tests__byte_stream_two_writes.cc
-.PHONY : tidy_tests__byte_stream_two_writes.cc
+.PHONY : src/EventLoop.i
 
-# fast build rule for target.
-tidy_tests__byte_stream_two_writes.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_tests__byte_stream_two_writes.cc.dir/build.make CMakeFiles/tidy_tests__byte_stream_two_writes.cc.dir/build
-.PHONY : tidy_tests__byte_stream_two_writes.cc/fast
+# target to preprocess a source file
+src/EventLoop.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoop.cpp.i
+.PHONY : src/EventLoop.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__tun.cc
+src/EventLoop.s: src/EventLoop.cpp.s
 
-# Build rule for target.
-tidy_quiet_util__tun.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__tun.cc
-.PHONY : tidy_quiet_util__tun.cc
+.PHONY : src/EventLoop.s
 
-# fast build rule for target.
-tidy_quiet_util__tun.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__tun.cc.dir/build.make CMakeFiles/tidy_quiet_util__tun.cc.dir/build
-.PHONY : tidy_quiet_util__tun.cc/fast
+# target to generate assembly for a file
+src/EventLoop.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoop.cpp.s
+.PHONY : src/EventLoop.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_doctests__socket_example_1.cc
+src/EventLoopThread.o: src/EventLoopThread.cpp.o
 
-# Build rule for target.
-tidy_doctests__socket_example_1.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__socket_example_1.cc
-.PHONY : tidy_doctests__socket_example_1.cc
+.PHONY : src/EventLoopThread.o
 
-# fast build rule for target.
-tidy_doctests__socket_example_1.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__socket_example_1.cc.dir/build.make CMakeFiles/tidy_doctests__socket_example_1.cc.dir/build
-.PHONY : tidy_doctests__socket_example_1.cc/fast
+# target to build an object file
+src/EventLoopThread.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o
+.PHONY : src/EventLoopThread.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_util__tun.cc
+src/EventLoopThread.i: src/EventLoopThread.cpp.i
 
-# Build rule for target.
-tidy_util__tun.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__tun.cc
-.PHONY : tidy_util__tun.cc
+.PHONY : src/EventLoopThread.i
 
-# fast build rule for target.
-tidy_util__tun.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__tun.cc.dir/build.make CMakeFiles/tidy_util__tun.cc.dir/build
-.PHONY : tidy_util__tun.cc/fast
+# target to preprocess a source file
+src/EventLoopThread.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.i
+.PHONY : src/EventLoopThread.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_tests__byte_stream_two_writes.cc
+src/EventLoopThread.s: src/EventLoopThread.cpp.s
 
-# Build rule for target.
-tidy_quiet_tests__byte_stream_two_writes.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_tests__byte_stream_two_writes.cc
-.PHONY : tidy_quiet_tests__byte_stream_two_writes.cc
+.PHONY : src/EventLoopThread.s
 
-# fast build rule for target.
-tidy_quiet_tests__byte_stream_two_writes.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_tests__byte_stream_two_writes.cc.dir/build.make CMakeFiles/tidy_quiet_tests__byte_stream_two_writes.cc.dir/build
-.PHONY : tidy_quiet_tests__byte_stream_two_writes.cc/fast
+# target to generate assembly for a file
+src/EventLoopThread.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.s
+.PHONY : src/EventLoopThread.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_tests__byte_stream_capacity.cc
+src/EventLoopThreadPool.o: src/EventLoopThreadPool.cpp.o
 
-# Build rule for target.
-tidy_tests__byte_stream_capacity.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_tests__byte_stream_capacity.cc
-.PHONY : tidy_tests__byte_stream_capacity.cc
+.PHONY : src/EventLoopThreadPool.o
 
-# fast build rule for target.
-tidy_tests__byte_stream_capacity.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_tests__byte_stream_capacity.cc.dir/build.make CMakeFiles/tidy_tests__byte_stream_capacity.cc.dir/build
-.PHONY : tidy_tests__byte_stream_capacity.cc/fast
+# target to build an object file
+src/EventLoopThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoopThreadPool.cpp.o
+.PHONY : src/EventLoopThreadPool.cpp.o
 
-#=============================================================================
-# Target rules for targets named format
+src/EventLoopThreadPool.i: src/EventLoopThreadPool.cpp.i
 
-# Build rule for target.
-format: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 format
-.PHONY : format
+.PHONY : src/EventLoopThreadPool.i
 
-# fast build rule for target.
-format/fast:
-	$(MAKE) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/build
-.PHONY : format/fast
+# target to preprocess a source file
+src/EventLoopThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoopThreadPool.cpp.i
+.PHONY : src/EventLoopThreadPool.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_util__util.cc
+src/EventLoopThreadPool.s: src/EventLoopThreadPool.cpp.s
 
-# Build rule for target.
-tidy_quiet_util__util.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_util__util.cc
-.PHONY : tidy_quiet_util__util.cc
+.PHONY : src/EventLoopThreadPool.s
 
-# fast build rule for target.
-tidy_quiet_util__util.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_util__util.cc.dir/build.make CMakeFiles/tidy_quiet_util__util.cc.dir/build
-.PHONY : tidy_quiet_util__util.cc/fast
+# target to generate assembly for a file
+src/EventLoopThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/EventLoopThreadPool.cpp.s
+.PHONY : src/EventLoopThreadPool.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_tests__byte_stream_construction.cc
+src/InetAddress.o: src/InetAddress.cpp.o
 
-# Build rule for target.
-tidy_quiet_tests__byte_stream_construction.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_tests__byte_stream_construction.cc
-.PHONY : tidy_quiet_tests__byte_stream_construction.cc
+.PHONY : src/InetAddress.o
 
-# fast build rule for target.
-tidy_quiet_tests__byte_stream_construction.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_tests__byte_stream_construction.cc.dir/build.make CMakeFiles/tidy_quiet_tests__byte_stream_construction.cc.dir/build
-.PHONY : tidy_quiet_tests__byte_stream_construction.cc/fast
+# target to build an object file
+src/InetAddress.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/InetAddress.cpp.o
+.PHONY : src/InetAddress.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_doctests__parser_example.cc
+src/InetAddress.i: src/InetAddress.cpp.i
 
-# Build rule for target.
-tidy_doctests__parser_example.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_doctests__parser_example.cc
-.PHONY : tidy_doctests__parser_example.cc
+.PHONY : src/InetAddress.i
 
-# fast build rule for target.
-tidy_doctests__parser_example.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_doctests__parser_example.cc.dir/build.make CMakeFiles/tidy_doctests__parser_example.cc.dir/build
-.PHONY : tidy_doctests__parser_example.cc/fast
+# target to preprocess a source file
+src/InetAddress.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/InetAddress.cpp.i
+.PHONY : src/InetAddress.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_tests__byte_stream_many_writes.cc
+src/InetAddress.s: src/InetAddress.cpp.s
 
-# Build rule for target.
-tidy_quiet_tests__byte_stream_many_writes.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_tests__byte_stream_many_writes.cc
-.PHONY : tidy_quiet_tests__byte_stream_many_writes.cc
+.PHONY : src/InetAddress.s
 
-# fast build rule for target.
-tidy_quiet_tests__byte_stream_many_writes.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_tests__byte_stream_many_writes.cc.dir/build.make CMakeFiles/tidy_quiet_tests__byte_stream_many_writes.cc.dir/build
-.PHONY : tidy_quiet_tests__byte_stream_many_writes.cc/fast
+# target to generate assembly for a file
+src/InetAddress.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/InetAddress.cpp.s
+.PHONY : src/InetAddress.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_tests__byte_stream_many_writes.cc
+src/Logger.o: src/Logger.cpp.o
 
-# Build rule for target.
-tidy_tests__byte_stream_many_writes.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_tests__byte_stream_many_writes.cc
-.PHONY : tidy_tests__byte_stream_many_writes.cc
+.PHONY : src/Logger.o
 
-# fast build rule for target.
-tidy_tests__byte_stream_many_writes.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_tests__byte_stream_many_writes.cc.dir/build.make CMakeFiles/tidy_tests__byte_stream_many_writes.cc.dir/build
-.PHONY : tidy_tests__byte_stream_many_writes.cc/fast
+# target to build an object file
+src/Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Logger.cpp.o
+.PHONY : src/Logger.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_tests__byte_stream_one_write.cc
+src/Logger.i: src/Logger.cpp.i
 
-# Build rule for target.
-tidy_quiet_tests__byte_stream_one_write.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_tests__byte_stream_one_write.cc
-.PHONY : tidy_quiet_tests__byte_stream_one_write.cc
+.PHONY : src/Logger.i
 
-# fast build rule for target.
-tidy_quiet_tests__byte_stream_one_write.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_tests__byte_stream_one_write.cc.dir/build.make CMakeFiles/tidy_quiet_tests__byte_stream_one_write.cc.dir/build
-.PHONY : tidy_quiet_tests__byte_stream_one_write.cc/fast
+# target to preprocess a source file
+src/Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Logger.cpp.i
+.PHONY : src/Logger.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_quiet_tests__byte_stream_test_harness.cc
+src/Logger.s: src/Logger.cpp.s
 
-# Build rule for target.
-tidy_quiet_tests__byte_stream_test_harness.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_quiet_tests__byte_stream_test_harness.cc
-.PHONY : tidy_quiet_tests__byte_stream_test_harness.cc
+.PHONY : src/Logger.s
 
-# fast build rule for target.
-tidy_quiet_tests__byte_stream_test_harness.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_quiet_tests__byte_stream_test_harness.cc.dir/build.make CMakeFiles/tidy_quiet_tests__byte_stream_test_harness.cc.dir/build
-.PHONY : tidy_quiet_tests__byte_stream_test_harness.cc/fast
+# target to generate assembly for a file
+src/Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Logger.cpp.s
+.PHONY : src/Logger.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_tests__byte_stream_test_harness.cc
+src/Poller.o: src/Poller.cpp.o
 
-# Build rule for target.
-tidy_tests__byte_stream_test_harness.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_tests__byte_stream_test_harness.cc
-.PHONY : tidy_tests__byte_stream_test_harness.cc
+.PHONY : src/Poller.o
 
-# fast build rule for target.
-tidy_tests__byte_stream_test_harness.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_tests__byte_stream_test_harness.cc.dir/build.make CMakeFiles/tidy_tests__byte_stream_test_harness.cc.dir/build
-.PHONY : tidy_tests__byte_stream_test_harness.cc/fast
+# target to build an object file
+src/Poller.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Poller.cpp.o
+.PHONY : src/Poller.cpp.o
 
-#=============================================================================
-# Target rules for targets named tidy_util__buffer.cc
+src/Poller.i: src/Poller.cpp.i
 
-# Build rule for target.
-tidy_util__buffer.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__buffer.cc
-.PHONY : tidy_util__buffer.cc
+.PHONY : src/Poller.i
 
-# fast build rule for target.
-tidy_util__buffer.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__buffer.cc.dir/build.make CMakeFiles/tidy_util__buffer.cc.dir/build
-.PHONY : tidy_util__buffer.cc/fast
+# target to preprocess a source file
+src/Poller.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Poller.cpp.i
+.PHONY : src/Poller.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy
+src/Poller.s: src/Poller.cpp.s
 
-# Build rule for target.
-tidy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy
-.PHONY : tidy
+.PHONY : src/Poller.s
 
-# fast build rule for target.
-tidy/fast:
-	$(MAKE) -f CMakeFiles/tidy.dir/build.make CMakeFiles/tidy.dir/build
-.PHONY : tidy/fast
+# target to generate assembly for a file
+src/Poller.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Poller.cpp.s
+.PHONY : src/Poller.cpp.s
 
-#=============================================================================
-# Target rules for targets named tidy_verbose
+src/Socket.o: src/Socket.cpp.o
 
-# Build rule for target.
-tidy_verbose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_verbose
-.PHONY : tidy_verbose
+.PHONY : src/Socket.o
 
-# fast build rule for target.
-tidy_verbose/fast:
-	$(MAKE) -f CMakeFiles/tidy_verbose.dir/build.make CMakeFiles/tidy_verbose.dir/build
-.PHONY : tidy_verbose/fast
+# target to build an object file
+src/Socket.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Socket.cpp.o
+.PHONY : src/Socket.cpp.o
 
-#=============================================================================
-# Target rules for targets named check_lab1
+src/Socket.i: src/Socket.cpp.i
 
-# Build rule for target.
-check_lab1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_lab1
-.PHONY : check_lab1
+.PHONY : src/Socket.i
 
-# fast build rule for target.
-check_lab1/fast:
-	$(MAKE) -f CMakeFiles/check_lab1.dir/build.make CMakeFiles/check_lab1.dir/build
-.PHONY : check_lab1/fast
+# target to preprocess a source file
+src/Socket.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Socket.cpp.i
+.PHONY : src/Socket.cpp.i
 
-#=============================================================================
-# Target rules for targets named tidy_util__file_descriptor.cc
+src/Socket.s: src/Socket.cpp.s
 
-# Build rule for target.
-tidy_util__file_descriptor.cc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tidy_util__file_descriptor.cc
-.PHONY : tidy_util__file_descriptor.cc
+.PHONY : src/Socket.s
 
-# fast build rule for target.
-tidy_util__file_descriptor.cc/fast:
-	$(MAKE) -f CMakeFiles/tidy_util__file_descriptor.cc.dir/build.make CMakeFiles/tidy_util__file_descriptor.cc.dir/build
-.PHONY : tidy_util__file_descriptor.cc/fast
+# target to generate assembly for a file
+src/Socket.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Socket.cpp.s
+.PHONY : src/Socket.cpp.s
 
-#=============================================================================
-# Target rules for targets named check_webget
+src/TcpConnection.o: src/TcpConnection.cpp.o
 
-# Build rule for target.
-check_webget: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 check_webget
-.PHONY : check_webget
+.PHONY : src/TcpConnection.o
 
-# fast build rule for target.
-check_webget/fast:
-	$(MAKE) -f CMakeFiles/check_webget.dir/build.make CMakeFiles/check_webget.dir/build
-.PHONY : check_webget/fast
+# target to build an object file
+src/TcpConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o
+.PHONY : src/TcpConnection.cpp.o
 
-#=============================================================================
-# Target rules for targets named sponge
+src/TcpConnection.i: src/TcpConnection.cpp.i
 
-# Build rule for target.
-sponge: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sponge
-.PHONY : sponge
+.PHONY : src/TcpConnection.i
 
-# fast build rule for target.
-sponge/fast:
-	$(MAKE) -f libsponge/CMakeFiles/sponge.dir/build.make libsponge/CMakeFiles/sponge.dir/build
-.PHONY : sponge/fast
+# target to preprocess a source file
+src/TcpConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.i
+.PHONY : src/TcpConnection.cpp.i
 
-#=============================================================================
-# Target rules for targets named webget
+src/TcpConnection.s: src/TcpConnection.cpp.s
 
-# Build rule for target.
-webget: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 webget
-.PHONY : webget
+.PHONY : src/TcpConnection.s
 
-# fast build rule for target.
-webget/fast:
-	$(MAKE) -f apps/CMakeFiles/webget.dir/build.make apps/CMakeFiles/webget.dir/build
-.PHONY : webget/fast
+# target to generate assembly for a file
+src/TcpConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.s
+.PHONY : src/TcpConnection.cpp.s
 
-#=============================================================================
-# Target rules for targets named byte_stream_many_writes
+src/TcpServer.o: src/TcpServer.cpp.o
 
-# Build rule for target.
-byte_stream_many_writes: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 byte_stream_many_writes
-.PHONY : byte_stream_many_writes
+.PHONY : src/TcpServer.o
 
-# fast build rule for target.
-byte_stream_many_writes/fast:
-	$(MAKE) -f tests/CMakeFiles/byte_stream_many_writes.dir/build.make tests/CMakeFiles/byte_stream_many_writes.dir/build
-.PHONY : byte_stream_many_writes/fast
+# target to build an object file
+src/TcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o
+.PHONY : src/TcpServer.cpp.o
 
-#=============================================================================
-# Target rules for targets named byte_stream_capacity
+src/TcpServer.i: src/TcpServer.cpp.i
 
-# Build rule for target.
-byte_stream_capacity: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 byte_stream_capacity
-.PHONY : byte_stream_capacity
+.PHONY : src/TcpServer.i
 
-# fast build rule for target.
-byte_stream_capacity/fast:
-	$(MAKE) -f tests/CMakeFiles/byte_stream_capacity.dir/build.make tests/CMakeFiles/byte_stream_capacity.dir/build
-.PHONY : byte_stream_capacity/fast
+# target to preprocess a source file
+src/TcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/TcpServer.cpp.i
+.PHONY : src/TcpServer.cpp.i
 
-#=============================================================================
-# Target rules for targets named byte_stream_two_writes
+src/TcpServer.s: src/TcpServer.cpp.s
 
-# Build rule for target.
-byte_stream_two_writes: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 byte_stream_two_writes
-.PHONY : byte_stream_two_writes
+.PHONY : src/TcpServer.s
 
-# fast build rule for target.
-byte_stream_two_writes/fast:
-	$(MAKE) -f tests/CMakeFiles/byte_stream_two_writes.dir/build.make tests/CMakeFiles/byte_stream_two_writes.dir/build
-.PHONY : byte_stream_two_writes/fast
+# target to generate assembly for a file
+src/TcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/TcpServer.cpp.s
+.PHONY : src/TcpServer.cpp.s
 
-#=============================================================================
-# Target rules for targets named byte_stream_one_write
+src/Thread.o: src/Thread.cpp.o
 
-# Build rule for target.
-byte_stream_one_write: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 byte_stream_one_write
-.PHONY : byte_stream_one_write
+.PHONY : src/Thread.o
 
-# fast build rule for target.
-byte_stream_one_write/fast:
-	$(MAKE) -f tests/CMakeFiles/byte_stream_one_write.dir/build.make tests/CMakeFiles/byte_stream_one_write.dir/build
-.PHONY : byte_stream_one_write/fast
+# target to build an object file
+src/Thread.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Thread.cpp.o
+.PHONY : src/Thread.cpp.o
 
-#=============================================================================
-# Target rules for targets named byte_stream_construction
+src/Thread.i: src/Thread.cpp.i
 
-# Build rule for target.
-byte_stream_construction: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 byte_stream_construction
-.PHONY : byte_stream_construction
+.PHONY : src/Thread.i
 
-# fast build rule for target.
-byte_stream_construction/fast:
-	$(MAKE) -f tests/CMakeFiles/byte_stream_construction.dir/build.make tests/CMakeFiles/byte_stream_construction.dir/build
-.PHONY : byte_stream_construction/fast
+# target to preprocess a source file
+src/Thread.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Thread.cpp.i
+.PHONY : src/Thread.cpp.i
 
-#=============================================================================
-# Target rules for targets named spongechecks
+src/Thread.s: src/Thread.cpp.s
 
-# Build rule for target.
-spongechecks: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 spongechecks
-.PHONY : spongechecks
+.PHONY : src/Thread.s
 
-# fast build rule for target.
-spongechecks/fast:
-	$(MAKE) -f tests/CMakeFiles/spongechecks.dir/build.make tests/CMakeFiles/spongechecks.dir/build
-.PHONY : spongechecks/fast
+# target to generate assembly for a file
+src/Thread.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Thread.cpp.s
+.PHONY : src/Thread.cpp.s
 
-#=============================================================================
-# Target rules for targets named parser_dt
+src/Timestamp.o: src/Timestamp.cpp.o
 
-# Build rule for target.
-parser_dt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 parser_dt
-.PHONY : parser_dt
+.PHONY : src/Timestamp.o
 
-# fast build rule for target.
-parser_dt/fast:
-	$(MAKE) -f doctests/CMakeFiles/parser_dt.dir/build.make doctests/CMakeFiles/parser_dt.dir/build
-.PHONY : parser_dt/fast
+# target to build an object file
+src/Timestamp.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o
+.PHONY : src/Timestamp.cpp.o
 
-#=============================================================================
-# Target rules for targets named socket_dt
+src/Timestamp.i: src/Timestamp.cpp.i
 
-# Build rule for target.
-socket_dt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 socket_dt
-.PHONY : socket_dt
+.PHONY : src/Timestamp.i
 
-# fast build rule for target.
-socket_dt/fast:
-	$(MAKE) -f doctests/CMakeFiles/socket_dt.dir/build.make doctests/CMakeFiles/socket_dt.dir/build
-.PHONY : socket_dt/fast
+# target to preprocess a source file
+src/Timestamp.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Timestamp.cpp.i
+.PHONY : src/Timestamp.cpp.i
 
-#=============================================================================
-# Target rules for targets named address_dt
+src/Timestamp.s: src/Timestamp.cpp.s
 
-# Build rule for target.
-address_dt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 address_dt
-.PHONY : address_dt
+.PHONY : src/Timestamp.s
 
-# fast build rule for target.
-address_dt/fast:
-	$(MAKE) -f doctests/CMakeFiles/address_dt.dir/build.make doctests/CMakeFiles/address_dt.dir/build
-.PHONY : address_dt/fast
+# target to generate assembly for a file
+src/Timestamp.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Timestamp.cpp.s
+.PHONY : src/Timestamp.cpp.s
 
 # Help Target
 help:
@@ -1115,85 +634,64 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... check"
-	@echo "... check_lab6"
-	@echo "... check_lab5"
-	@echo "... check_lab4"
-	@echo "... tidy_quiet_util__buffer.cc"
-	@echo "... check_lab0"
-	@echo "... tidy_libsponge__byte_stream.cc"
-	@echo "... tidy_quiet_doctests__parser_dt.cc"
-	@echo "... tidy_quiet_libsponge__byte_stream.cc"
-	@echo "... tidy_tests__byte_stream_one_write.cc"
-	@echo "... check_lab2"
-	@echo "... tidy_doctests__socket_example_3.cc"
-	@echo "... tidy_quiet_doctests__socket_example_3.cc"
-	@echo "... tidy_quiet_doctests__socket_example_2.cc"
-	@echo "... tidy_quiet_util__file_descriptor.cc"
-	@echo "... tidy_tests__byte_stream_construction.cc"
-	@echo "... tidy_util__util.cc"
-	@echo "... tidy_doctests__socket_dt.cc"
-	@echo "... doc"
-	@echo "... tidy_doctests__address_example_1.cc"
-	@echo "... tidy_doctests__socket_example_2.cc"
-	@echo "... tidy_doctests__address_example_2.cc"
-	@echo "... tidy_quiet_tests__byte_stream_capacity.cc"
-	@echo "... tidy_quiet_doctests__socket_dt.cc"
-	@echo "... tidy_quiet_doctests__parser_example.cc"
-	@echo "... tidy_quiet_apps__webget.cc"
-	@echo "... tidy_quiet_doctests__address_example_2.cc"
-	@echo "... tidy_util__address.cc"
-	@echo "... tidy_apps__webget.cc"
-	@echo "... tidy_quiet_doctests__address_dt.cc"
-	@echo "... tidy_quiet_doctests__address_example_1.cc"
-	@echo "... check_lab3"
-	@echo "... tidy_doctests__address_dt.cc"
-	@echo "... tidy_doctests__parser_dt.cc"
-	@echo "... tidy_quiet_doctests__socket_example_1.cc"
-	@echo "... tidy_quiet_util__address.cc"
-	@echo "... tidy_doctests__address_example_3.cc"
-	@echo "... tidy_quiet_doctests__address_example_3.cc"
-	@echo "... tidy_quiet_util__eventloop.cc"
-	@echo "... tidy_util__eventloop.cc"
-	@echo "... tidy_quiet_util__parser.cc"
-	@echo "... tidy_util__parser.cc"
-	@echo "... tidy_quiet_util__socket.cc"
-	@echo "... tidy_util__socket.cc"
-	@echo "... tidy_tests__byte_stream_two_writes.cc"
-	@echo "... tidy_quiet_util__tun.cc"
-	@echo "... tidy_doctests__socket_example_1.cc"
-	@echo "... tidy_util__tun.cc"
-	@echo "... tidy_quiet_tests__byte_stream_two_writes.cc"
-	@echo "... tidy_tests__byte_stream_capacity.cc"
-	@echo "... format"
-	@echo "... tidy_quiet_util__util.cc"
-	@echo "... tidy_quiet_tests__byte_stream_construction.cc"
-	@echo "... tidy_doctests__parser_example.cc"
-	@echo "... tidy_quiet_tests__byte_stream_many_writes.cc"
-	@echo "... tidy_tests__byte_stream_many_writes.cc"
-	@echo "... tidy_quiet_tests__byte_stream_one_write.cc"
-	@echo "... tidy_quiet_tests__byte_stream_test_harness.cc"
-	@echo "... tidy_tests__byte_stream_test_harness.cc"
-	@echo "... tidy_util__buffer.cc"
-	@echo "... tidy"
-	@echo "... tidy_verbose"
-	@echo "... check_lab1"
-	@echo "... tidy_util__file_descriptor.cc"
-	@echo "... check_webget"
-	@echo "... sponge"
-	@echo "... webget"
-	@echo "... byte_stream_many_writes"
-	@echo "... byte_stream_capacity"
-	@echo "... byte_stream_two_writes"
-	@echo "... byte_stream_one_write"
-	@echo "... byte_stream_construction"
-	@echo "... spongechecks"
-	@echo "... parser_dt"
-	@echo "... socket_dt"
-	@echo "... address_dt"
+	@echo "... mymuduo"
+	@echo "... src/Acceptor.o"
+	@echo "... src/Acceptor.i"
+	@echo "... src/Acceptor.s"
+	@echo "... src/Buffer.o"
+	@echo "... src/Buffer.i"
+	@echo "... src/Buffer.s"
+	@echo "... src/Channel.o"
+	@echo "... src/Channel.i"
+	@echo "... src/Channel.s"
+	@echo "... src/CurrentThread.o"
+	@echo "... src/CurrentThread.i"
+	@echo "... src/CurrentThread.s"
+	@echo "... src/DefaultPoller.o"
+	@echo "... src/DefaultPoller.i"
+	@echo "... src/DefaultPoller.s"
+	@echo "... src/EpollPoller.o"
+	@echo "... src/EpollPoller.i"
+	@echo "... src/EpollPoller.s"
+	@echo "... src/EventLoop.o"
+	@echo "... src/EventLoop.i"
+	@echo "... src/EventLoop.s"
+	@echo "... src/EventLoopThread.o"
+	@echo "... src/EventLoopThread.i"
+	@echo "... src/EventLoopThread.s"
+	@echo "... src/EventLoopThreadPool.o"
+	@echo "... src/EventLoopThreadPool.i"
+	@echo "... src/EventLoopThreadPool.s"
+	@echo "... src/InetAddress.o"
+	@echo "... src/InetAddress.i"
+	@echo "... src/InetAddress.s"
+	@echo "... src/Logger.o"
+	@echo "... src/Logger.i"
+	@echo "... src/Logger.s"
+	@echo "... src/Poller.o"
+	@echo "... src/Poller.i"
+	@echo "... src/Poller.s"
+	@echo "... src/Socket.o"
+	@echo "... src/Socket.i"
+	@echo "... src/Socket.s"
+	@echo "... src/TcpConnection.o"
+	@echo "... src/TcpConnection.i"
+	@echo "... src/TcpConnection.s"
+	@echo "... src/TcpServer.o"
+	@echo "... src/TcpServer.i"
+	@echo "... src/TcpServer.s"
+	@echo "... src/Thread.o"
+	@echo "... src/Thread.i"
+	@echo "... src/Thread.s"
+	@echo "... src/Timestamp.o"
+	@echo "... src/Timestamp.i"
+	@echo "... src/Timestamp.s"
 .PHONY : help
 
 
