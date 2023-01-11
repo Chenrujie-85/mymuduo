@@ -96,7 +96,7 @@ void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr)
     //设置了如何关闭连接的回调 conn=>shutdown
     conn->setCloseCallback(
         std::bind(&TcpServer::removeConnection, this, std::placeholders::_1));
-    //直接调用
+    //直接调用,通过TcpConnection::connectEstablished()函数将该连接的sockfd绑定给loop的fd
     ioLoop->runInLoop(std::bind(&TcpConnection::connectEstablished, conn));
 }
 

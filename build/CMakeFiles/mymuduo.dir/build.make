@@ -265,9 +265,35 @@ CMakeFiles/mymuduo.dir/src/Thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/Thread.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/Thread.cpp -o CMakeFiles/mymuduo.dir/src/Thread.cpp.s
 
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: CMakeFiles/mymuduo.dir/flags.make
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: ../src/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/mymuduo.dir/src/Timer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/src/Timer.cpp.o -c /home/nagomi/mymuduo/src/Timer.cpp
+
+CMakeFiles/mymuduo.dir/src/Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/src/Timer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nagomi/mymuduo/src/Timer.cpp > CMakeFiles/mymuduo.dir/src/Timer.cpp.i
+
+CMakeFiles/mymuduo.dir/src/Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/Timer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/Timer.cpp -o CMakeFiles/mymuduo.dir/src/Timer.cpp.s
+
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: CMakeFiles/mymuduo.dir/flags.make
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/TimerQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o -c /home/nagomi/mymuduo/src/TimerQueue.cpp
+
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nagomi/mymuduo/src/TimerQueue.cpp > CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.i
+
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/TimerQueue.cpp -o CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.s
+
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o: CMakeFiles/mymuduo.dir/flags.make
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o: ../src/Timestamp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o -c /home/nagomi/mymuduo/src/Timestamp.cpp
 
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.i: cmake_force
@@ -296,6 +322,8 @@ mymuduo_OBJECTS = \
 "CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o" \
 "CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o" \
 "CMakeFiles/mymuduo.dir/src/Thread.cpp.o" \
+"CMakeFiles/mymuduo.dir/src/Timer.cpp.o" \
+"CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o" \
 "CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o"
 
 # External object files for target mymuduo
@@ -317,10 +345,12 @@ mymuduo_EXTERNAL_OBJECTS =
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/Thread.cpp.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/Timer.cpp.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/build.make
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library ../lib/libmymuduo.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library ../lib/libmymuduo.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mymuduo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

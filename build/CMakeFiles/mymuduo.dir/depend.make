@@ -3,38 +3,51 @@
 
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Acceptor.cpp
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Acceptor.h
+CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Callbacks.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/InetAddress.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Logger.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Socket.h
+CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/Buffer.cpp.o: ../src/Buffer.cpp
 CMakeFiles/mymuduo.dir/src/Buffer.cpp.o: ../src/Buffer.h
 
+CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Callbacks.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Channel.cpp
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Logger.h
+CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.o: ../src/CurrentThread.cpp
 CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.o: ../src/CurrentThread.h
 
+CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/Callbacks.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/DefaultPoller.cpp
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/EpollPoller.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/Poller.h
+CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/DefaultPoller.cpp.o: ../src/noncopyable.h
 
+CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/Callbacks.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/EpollPoller.cpp
@@ -42,23 +55,35 @@ CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/EpollPoller.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/Logger.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/Poller.h
+CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/EpollPoller.cpp.o: ../src/noncopyable.h
 
+CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/Callbacks.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/EventLoop.cpp
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/Logger.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/Poller.h
+CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/EventLoop.cpp.o: ../src/noncopyable.h
 
+CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/Callbacks.h
+CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/EventLoopThread.cpp
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/EventLoopThread.h
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/Thread.h
+CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/EventLoopThread.cpp.o: ../src/noncopyable.h
 
@@ -76,11 +101,15 @@ CMakeFiles/mymuduo.dir/src/Logger.cpp.o: ../src/Logger.h
 CMakeFiles/mymuduo.dir/src/Logger.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/Logger.cpp.o: ../src/noncopyable.h
 
+CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/Callbacks.h
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/Channel.h
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/EventLoop.h
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/Poller.cpp
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/Poller.h
+CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/Poller.cpp.o: ../src/noncopyable.h
 
@@ -101,6 +130,9 @@ CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Logger.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Socket.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/TcpConnection.cpp
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/TcpConnection.h
+CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/noncopyable.h
 
@@ -117,6 +149,9 @@ CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/Socket.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TcpConnection.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TcpServer.cpp
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TcpServer.h
+CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/noncopyable.h
 
@@ -124,6 +159,24 @@ CMakeFiles/mymuduo.dir/src/Thread.cpp.o: ../src/CurrentThread.h
 CMakeFiles/mymuduo.dir/src/Thread.cpp.o: ../src/Thread.cpp
 CMakeFiles/mymuduo.dir/src/Thread.cpp.o: ../src/Thread.h
 CMakeFiles/mymuduo.dir/src/Thread.cpp.o: ../src/noncopyable.h
+
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: ../src/Callbacks.h
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: ../src/Timer.cpp
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/Timer.cpp.o: ../src/noncopyable.h
+
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/Callbacks.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/Channel.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/CurrentThread.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/EventLoop.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/Logger.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/TimerQueue.cpp
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/TimerQueue.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o: ../src/Timestamp.cpp
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o: ../src/Timestamp.h

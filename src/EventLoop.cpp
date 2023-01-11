@@ -28,6 +28,7 @@ EventLoop::EventLoop()
     , callingPendingFunctors_(false)
     , threadId_(CurrentThread::tid())
     , poller_(Poller::newDefaultPoller(this))
+    , timerQueue_(new TimerQueue(this))
     , wakeupFd_(createEventfd())
     , wakeupChannel_(new Channel(this, wakeupFd_))
 {
@@ -114,6 +115,30 @@ void EventLoop::queueInLoop(Functor cb)
         wakeup();
     }
 }
+//添加一次性的时间事件，当有新链接到达时，调用绑定的新链接到达的回调函数，添加一个时间事件
+TimerId EventLoop::runAt(const Timestamp& time, const TimerCallback& cb)
+{
+    return timerQueue_->addTimer(cb, time, 0.0);
+}
+//设置延迟为delay的时间事件
+TimerId EventLoop::runAfter(double delay, const TimerCallback& cb)
+{
+    Timestamp time(addTime(Timestamp::now(), delay));
+    return runAt(time, cb);
+}
+//添加可重用，间隔为interval的时间事件
+TimerId EventLoop::runEvery(double interval, const TimerCallback& cb)
+{
+    Timestamp time(addTime(Timestamp::now(), interval));
+    return timerQueue_->addTimer(cb, time, interval);
+}
+//取消该时间事件
+void EventLoop::cancel(TimerId timerId)
+{
+    return timerQueue_->cancel(timerId);
+}
+
+
 //向wakeupfd写一个数据,wakeupChannel发生读事件，当前loop线程就会被唤醒
 void EventLoop::wakeup()
 {

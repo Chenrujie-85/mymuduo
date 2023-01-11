@@ -28,7 +28,7 @@ cd  ${SOURCE_DIR}/build &&
     make install
 
 # 将头文件复制到 /usr/include
-cp ${SOURCE_DIR}/include/mymuduo -r /usr/include/mymuduo 
+cp ${SOURCE_DIR}/include/mymuduo -r /usr/include
 
 # 将动态库文件复制到/usr/lib
 cp ${SOURCE_DIR}/lib/libmymuduo.so /usr/lib

@@ -9,6 +9,8 @@
 #include <mutex>
 #include "CurrentThread.h"
 #include <memory>
+#include "TimerId.h"
+#include "TimerQueue.h"
 
 class Channel;
 class Poller;
@@ -38,6 +40,11 @@ public:
     bool hasChannel(Channel *channel);
     //判断EventLoop对象是否在自己的线程里
     bool isInLoopThread() const { return threadId_ == CurrentThread::tid(); }
+
+    TimerId runAt(const Timestamp& time, const TimerCallback& cb);
+    TimerId runAfter(double delay, const TimerCallback& cb);
+    TimerId runEvery(double interval, const TimerCallback& cb);
+    void cancel(TimerId timerId);
 private:
     void handleRead();
     void doPendingFunctors();
@@ -50,6 +57,8 @@ private:
     const pid_t threadId_; //纪录当前loop所在线程的id
     Timestamp pollReturnTime_; //poller返回发生事件时的时间
     std::unique_ptr<Poller> poller_;
+    
+    std::unique_ptr<TimerQueue> timerQueue_;
 
     int wakeupFd_; //当mainLoop获取一个新用户的channel，通过轮询算法选择一个subloop，通过该成员唤醒一个subloop
     std::unique_ptr<Channel> wakeupChannel_;
