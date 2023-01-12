@@ -150,7 +150,7 @@ void TcpConnection::connectEstablished()
     connectionCallback_(shared_from_this());
 }
 
-void TcpConnection::connectDestoryed()
+void TcpConnection::connectDestroyed()
 {
     if(state_ == kConnected)
     {
@@ -175,6 +175,23 @@ void TcpConnection::shutdownInLoop()
     if(!channel_->isWriting())//当前outpu中的数据全部发送完成
     {
         socket_->shutdownWrite();
+    }
+}
+
+void TcpConnection::forceClose()
+{
+    if (state_ == kConnected || state_ == kDisconnecting)
+    {
+        setState(kDisconnecting);
+        loop_->queueInLoop(std::bind(&TcpConnection::forceCloseInLoop, shared_from_this()));
+    }
+}
+
+void TcpConnection::forceCloseInLoop()
+{
+    if (state_ == kConnected || state_ == kDisconnecting)
+    {
+        handleClose();
     }
 }
 

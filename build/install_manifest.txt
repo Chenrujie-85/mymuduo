@@ -10,7 +10,10 @@
 /home/nagomi/mymuduo/include/mymuduo/EventLoopThreadPool.h
 /home/nagomi/mymuduo/include/mymuduo/EventLoop.h
 /home/nagomi/mymuduo/include/mymuduo/TimerQueue.h
+/home/nagomi/mymuduo/include/mymuduo/Connector.h
 /home/nagomi/mymuduo/include/mymuduo/InetAddress.h
+/home/nagomi/mymuduo/include/mymuduo/TcpClient.h
+/home/nagomi/mymuduo/include/mymuduo/SocketsOps.h
 /home/nagomi/mymuduo/include/mymuduo/Timestamp.h
 /home/nagomi/mymuduo/include/mymuduo/TcpServer.h
 /home/nagomi/mymuduo/include/mymuduo/EventLoopThread.h

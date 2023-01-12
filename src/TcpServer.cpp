@@ -38,7 +38,7 @@ TcpServer::~TcpServer()
         item.second.reset();
 
         conn->getLoop()->runInLoop(
-            std::bind(&TcpConnection::connectDestoryed, conn)
+            std::bind(&TcpConnection::connectDestroyed, conn)
         );
     }
 
@@ -111,5 +111,5 @@ void TcpServer::removeConnectionInLoop(const TcpConnectionPtr& conn)
     connections_.erase(conn->name());
     EventLoop* ioLoop = conn->getLoop();
     ioLoop->queueInLoop(
-        std::bind(&TcpConnection::connectDestoryed, conn));
+        std::bind(&TcpConnection::connectDestroyed, conn));
 }

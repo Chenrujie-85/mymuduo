@@ -40,6 +40,8 @@ public:
     void send(const std::string &buf);
     void shutdown();
 
+    void forceClose();
+
     void setConnectionCallback(const ConnectionCallback& cb)
     { connectionCallback_ = cb; }
 
@@ -56,7 +58,7 @@ public:
     { closeCallback_ = cb; }
 
     void connectEstablished();
-    void connectDestoryed();
+    void connectDestroyed();
 
 private:
     enum StateE {kDisconnected, kConnecting, kConnected, kDisconnecting};
@@ -69,6 +71,7 @@ private:
 
     void sendInLoop(const void* message, size_t len);
     void shutdownInLoop();
+    void forceCloseInLoop();
 
     EventLoop *loop_;
     const std::string name_;

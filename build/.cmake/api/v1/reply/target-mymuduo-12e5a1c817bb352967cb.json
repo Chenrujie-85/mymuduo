@@ -79,7 +79,10 @@
 				15,
 				16,
 				17,
-				18
+				18,
+				19,
+				20,
+				21
 			]
 		}
 	],
@@ -130,7 +133,10 @@
 				15,
 				16,
 				17,
-				18
+				18,
+				19,
+				20,
+				21
 			]
 		}
 	],
@@ -152,6 +158,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Channel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Connector.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -212,6 +224,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Socket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SocketsOps.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/TcpClient.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

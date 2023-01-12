@@ -31,6 +31,21 @@ CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/Channel.cpp.o: ../src/noncopyable.h
 
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Callbacks.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Channel.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Connector.cpp
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Connector.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/CurrentThread.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/EventLoop.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/InetAddress.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Logger.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/SocketsOps.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/TimerQueue.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/Connector.cpp.o: ../src/noncopyable.h
+
 CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.o: ../src/CurrentThread.cpp
 CMakeFiles/mymuduo.dir/src/CurrentThread.cpp.o: ../src/CurrentThread.h
 
@@ -119,6 +134,30 @@ CMakeFiles/mymuduo.dir/src/Socket.cpp.o: ../src/Socket.cpp
 CMakeFiles/mymuduo.dir/src/Socket.cpp.o: ../src/Socket.h
 CMakeFiles/mymuduo.dir/src/Socket.cpp.o: ../src/Timestamp.h
 CMakeFiles/mymuduo.dir/src/Socket.cpp.o: ../src/noncopyable.h
+
+CMakeFiles/mymuduo.dir/src/SocketsOps.cpp.o: ../src/Logger.h
+CMakeFiles/mymuduo.dir/src/SocketsOps.cpp.o: ../src/SocketsOps.cpp
+CMakeFiles/mymuduo.dir/src/SocketsOps.cpp.o: ../src/SocketsOps.h
+CMakeFiles/mymuduo.dir/src/SocketsOps.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/SocketsOps.cpp.o: ../src/noncopyable.h
+
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Buffer.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Callbacks.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Channel.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Connector.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/CurrentThread.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/EventLoop.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/InetAddress.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Logger.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/SocketsOps.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TcpClient.cpp
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TcpClient.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TcpConnection.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TimerQueue.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Buffer.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Callbacks.h
