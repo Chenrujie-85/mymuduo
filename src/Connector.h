@@ -26,8 +26,8 @@ public:
     const InetAddress& serverAddress() const { return serverAddr_; }
 private:
     enum States {kDisconnected, kConnecting, kConnected};
-    static const int kMaxRetryDelayMs = 30*1000;//最大重连间隔
-    static const int kInitRetryDelayMs = 500;
+    static const int kMaxRetryDelayMs;//最大重连间隔
+    static const int kInitRetryDelayMs;
 
     void setState(States s) { state_ = s; }
     void startInLoop();

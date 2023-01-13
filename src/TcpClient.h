@@ -40,8 +40,6 @@ public:
     void setWriteCompleteCallback(const WriteCompleteCallback& cb)
     { writeCompleteCallback_ = cb; }
 
-    void setCloseCallback(const CloseCallback& cb)
-    { }
 private:
     void newConnection(int sockfd);
     void removeConnection(const TcpConnectionPtr& conn);
@@ -53,7 +51,6 @@ private:
     ConnectionCallback connectionCallback_;//默认打印日志
     MessageCallback messageCallback_;//默认重置缓冲区
     WriteCompleteCallback writeCompleteCallback_;
-    CloseCallback closeCallback_;
 
     std::atomic_bool retry_;//连接断开后是否重连
     std::atomic_bool connect_;

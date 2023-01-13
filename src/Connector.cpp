@@ -4,6 +4,9 @@
 #include <errno.h>
 #include "SocketsOps.h"
 
+const int Connector::kMaxRetryDelayMs = 30 * 1000;
+const int Connector::kInitRetryDelayMs = 500;
+
 Connector::Connector(EventLoop* loop, const InetAddress& serverAddress)
     : loop_(loop)
     , serverAddr_(serverAddress)
