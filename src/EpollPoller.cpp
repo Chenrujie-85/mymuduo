@@ -25,7 +25,7 @@ EpollPoller::~EpollPoller()
 Timestamp EpollPoller::poll(int timeout, ChannelList *activeChannels)
 {
     //实际上用DEBUG更合理
-    LOG_INFO("func=%s => fd total count:%d \n", __FUNCTION__, static_cast<int>(events_.size()));
+    //LOG_INFO("func=%s => fd total count:%d \n", __FUNCTION__, static_cast<int>(events_.size()));
 
     int numEvents = ::epoll_wait(epollfd_, &*events_.begin(), static_cast<int>(events_.size()), timeout);
     int saveErrno = errno;

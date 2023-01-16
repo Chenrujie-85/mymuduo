@@ -93,7 +93,7 @@ void TcpConnection::sendInLoop(const void* data, size_t len)
         LOG_ERROR("disconnected, give up writing");
         return;
     }
-    //channel第一次开始写数据，而且缓冲区没有待发送数据
+    //如果能够一次把所有数据传输走，则走这个分支，channel第一次开始写数据，而且缓冲区没有待发送数据
     if(!channel_->isWriting() && outputBuffer_.readableBytes() == 0)
     {
         nwrote = ::write(channel_->fd(), data, len);

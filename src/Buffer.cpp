@@ -2,6 +2,7 @@
 #include <errno.h>
 #include <sys/uio.h>
 #include "unistd.h"
+#include <iostream>
 
 ssize_t Buffer::readFd(int fd, int* saveErrno)
 {
@@ -18,6 +19,7 @@ ssize_t Buffer::readFd(int fd, int* saveErrno)
 
     const int iovcnt = (writable < sizeof extrabuf) ? 2 : 1;
     const ssize_t n = ::readv(fd, vec, iovcnt);
+    //std::cout<< n << std::endl;
     if(n < 0)
     {
         *saveErrno = errno;

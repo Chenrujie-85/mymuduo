@@ -4,6 +4,8 @@
 #include <string>
 #include <functional>
 
+using namespace std;
+
 // 使用muduo开发回显服务器
 class EchoServer
 {
@@ -47,8 +49,21 @@ private:
                  Timestamp time)
     {
         std::string msg = buf->retrieveAllAsString();
-        conn->send(msg);
-        conn->shutdown(); //写段 EPOLLHUP=>closeCallback_
+        cout << msg <<endl;
+        if(msg.substr(0, msg.size()-2) == "hello")
+        {
+            //conn->send("hello \n");
+            conn->send("what do you want to do \n");
+        }
+        else if(msg.substr(0, msg.size()-2) == "bye")
+        {
+            conn->send("good bye \n");
+            conn->shutdown(); //写端 EPOLLHUP=>closeCallback_
+        }
+        else
+        {
+            conn->send("what do you want to do \n");
+        }
     }
     EventLoop *loop_;
     TcpServer server_;

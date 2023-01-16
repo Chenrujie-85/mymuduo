@@ -39,6 +39,8 @@ sys/uio.h
 -
 unistd.h
 /home/nagomi/mymuduo/src/unistd.h
+iostream
+-
 
 /home/nagomi/mymuduo/src/Buffer.h
 vector
