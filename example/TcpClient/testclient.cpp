@@ -53,13 +53,12 @@ private:
     {
         std::string msg = buf->retrieveAllAsString();
         cout << msg <<endl;
-        if(msg.substr(0, msg.size()-2) == "what do you want to do")
-        {
-            string input;
-            getline(cin, input);
-            input += " \n";
-            conn->send(input);
-        }
+        // if(msg.substr(0, msg.size()-2) == "what do you want to do")
+        // {
+        //     string input;
+        //     cin >> input;
+        //     conn->send(input + " \n");
+        // }
     }
 
     void onWriteComplete()

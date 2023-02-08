@@ -763,6 +763,87 @@ src/Timestamp.cpp.s:
 	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/Timestamp.cpp.s
 .PHONY : src/Timestamp.cpp.s
 
+src/http/HttpContext.o: src/http/HttpContext.cpp.o
+
+.PHONY : src/http/HttpContext.o
+
+# target to build an object file
+src/http/HttpContext.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o
+.PHONY : src/http/HttpContext.cpp.o
+
+src/http/HttpContext.i: src/http/HttpContext.cpp.i
+
+.PHONY : src/http/HttpContext.i
+
+# target to preprocess a source file
+src/http/HttpContext.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.i
+.PHONY : src/http/HttpContext.cpp.i
+
+src/http/HttpContext.s: src/http/HttpContext.cpp.s
+
+.PHONY : src/http/HttpContext.s
+
+# target to generate assembly for a file
+src/http/HttpContext.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.s
+.PHONY : src/http/HttpContext.cpp.s
+
+src/http/HttpResponse.o: src/http/HttpResponse.cpp.o
+
+.PHONY : src/http/HttpResponse.o
+
+# target to build an object file
+src/http/HttpResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o
+.PHONY : src/http/HttpResponse.cpp.o
+
+src/http/HttpResponse.i: src/http/HttpResponse.cpp.i
+
+.PHONY : src/http/HttpResponse.i
+
+# target to preprocess a source file
+src/http/HttpResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.i
+.PHONY : src/http/HttpResponse.cpp.i
+
+src/http/HttpResponse.s: src/http/HttpResponse.cpp.s
+
+.PHONY : src/http/HttpResponse.s
+
+# target to generate assembly for a file
+src/http/HttpResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.s
+.PHONY : src/http/HttpResponse.cpp.s
+
+src/http/HttpServer.o: src/http/HttpServer.cpp.o
+
+.PHONY : src/http/HttpServer.o
+
+# target to build an object file
+src/http/HttpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o
+.PHONY : src/http/HttpServer.cpp.o
+
+src/http/HttpServer.i: src/http/HttpServer.cpp.i
+
+.PHONY : src/http/HttpServer.i
+
+# target to preprocess a source file
+src/http/HttpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.i
+.PHONY : src/http/HttpServer.cpp.i
+
+src/http/HttpServer.s: src/http/HttpServer.cpp.s
+
+.PHONY : src/http/HttpServer.s
+
+# target to generate assembly for a file
+src/http/HttpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.s
+.PHONY : src/http/HttpServer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -842,6 +923,15 @@ help:
 	@echo "... src/Timestamp.o"
 	@echo "... src/Timestamp.i"
 	@echo "... src/Timestamp.s"
+	@echo "... src/http/HttpContext.o"
+	@echo "... src/http/HttpContext.i"
+	@echo "... src/http/HttpContext.s"
+	@echo "... src/http/HttpResponse.o"
+	@echo "... src/http/HttpResponse.i"
+	@echo "... src/http/HttpResponse.s"
+	@echo "... src/http/HttpServer.o"
+	@echo "... src/http/HttpServer.i"
+	@echo "... src/http/HttpServer.s"
 .PHONY : help
 
 

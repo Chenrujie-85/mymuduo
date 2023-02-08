@@ -15,7 +15,6 @@
 #include "Buffer.h"
 #include "TcpConnection.h"
 
-
 class TcpServer : noncopyable
 {
 public:

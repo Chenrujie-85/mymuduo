@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -Dmymuduo_EXPORTS
 
-CXX_INCLUDES = -I/home/nagomi/mymuduo/src 
+CXX_INCLUDES = -I/home/nagomi/mymuduo/src -I/home/nagomi/mymuduo/src/http 
 

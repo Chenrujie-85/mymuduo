@@ -6,10 +6,12 @@ project(mymuduo)
 # 添加搜索路径
 include_directories(
     ${PROJECT_SOURCE_DIR}/src
+    ${PROJECT_SOURCE_DIR}/src/http
     )
 
-# 包含这些目录下的.cc文件
+# 包含这些目录下的.cpp文件
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src/http SRC_HTTP)
 
 # 设置编译选项
 set(CXX_FLAGS
@@ -18,9 +20,10 @@ set(CXX_FLAGS
     -std=c++11
     )
 
-# 生成动态库 tiny_network
+# 生成动态库 
 add_library(mymuduo SHARED 
             ${SRC_LIST}
+            ${SRC_HTTP}
             )
 
 # 目标动态库所需连接的库（这里需要连接libpthread.so）

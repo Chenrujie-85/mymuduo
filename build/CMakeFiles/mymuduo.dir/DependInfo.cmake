@@ -26,6 +26,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/nagomi/mymuduo/src/Timer.cpp" "/home/nagomi/mymuduo/build/CMakeFiles/mymuduo.dir/src/Timer.cpp.o"
   "/home/nagomi/mymuduo/src/TimerQueue.cpp" "/home/nagomi/mymuduo/build/CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o"
   "/home/nagomi/mymuduo/src/Timestamp.cpp" "/home/nagomi/mymuduo/build/CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o"
+  "/home/nagomi/mymuduo/src/http/HttpContext.cpp" "/home/nagomi/mymuduo/build/CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o"
+  "/home/nagomi/mymuduo/src/http/HttpResponse.cpp" "/home/nagomi/mymuduo/build/CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o"
+  "/home/nagomi/mymuduo/src/http/HttpServer.cpp" "/home/nagomi/mymuduo/build/CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -37,6 +40,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src"
+  "../src/http"
   )
 
 # Targets to which this target links.

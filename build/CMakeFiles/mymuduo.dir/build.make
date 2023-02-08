@@ -343,6 +343,45 @@ CMakeFiles/mymuduo.dir/src/Timestamp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/Timestamp.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/Timestamp.cpp -o CMakeFiles/mymuduo.dir/src/Timestamp.cpp.s
 
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: CMakeFiles/mymuduo.dir/flags.make
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/http/HttpContext.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o -c /home/nagomi/mymuduo/src/http/HttpContext.cpp
+
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nagomi/mymuduo/src/http/HttpContext.cpp > CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.i
+
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/http/HttpContext.cpp -o CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.s
+
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: CMakeFiles/mymuduo.dir/flags.make
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/http/HttpResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o -c /home/nagomi/mymuduo/src/http/HttpResponse.cpp
+
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nagomi/mymuduo/src/http/HttpResponse.cpp > CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.i
+
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/http/HttpResponse.cpp -o CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.s
+
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: CMakeFiles/mymuduo.dir/flags.make
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/http/HttpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o -c /home/nagomi/mymuduo/src/http/HttpServer.cpp
+
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nagomi/mymuduo/src/http/HttpServer.cpp > CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.i
+
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nagomi/mymuduo/src/http/HttpServer.cpp -o CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.s
+
 # Object files for target mymuduo
 mymuduo_OBJECTS = \
 "CMakeFiles/mymuduo.dir/src/Acceptor.cpp.o" \
@@ -366,7 +405,10 @@ mymuduo_OBJECTS = \
 "CMakeFiles/mymuduo.dir/src/Thread.cpp.o" \
 "CMakeFiles/mymuduo.dir/src/Timer.cpp.o" \
 "CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o" \
-"CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o"
+"CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o" \
+"CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o" \
+"CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o" \
+"CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o"
 
 # External object files for target mymuduo
 mymuduo_EXTERNAL_OBJECTS =
@@ -393,9 +435,12 @@ mymuduo_EXTERNAL_OBJECTS =
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/Timer.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/build.make
 ../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX shared library ../lib/libmymuduo.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nagomi/mymuduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX shared library ../lib/libmymuduo.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mymuduo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

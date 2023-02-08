@@ -3,7 +3,6 @@
 #include "HttpRequest.h"
 #include "HttpResponse.h"
 #include "../Logger.h"
-#include <any>
 
 namespace detail
 {
@@ -18,7 +17,7 @@ namespace detail
 HttpServer::HttpServer(EventLoop* loop,
             const InetAddress& listenAddr,
             const std::string& name,
-            TcpServer::Option option = TcpServer::kNoReusePort)
+            TcpServer::Option option)
     : server_(loop, listenAddr, name, option),
       httpCallback_(detail::defaultHttpCallback)
 {
@@ -29,11 +28,12 @@ HttpServer::HttpServer(EventLoop* loop,
 
 HttpServer::~HttpServer()
 {
+    LOG_INFO("HttpServer %s close \n", server_.name().c_str());
 }
 
 void HttpServer::start()
 {
-    LOG_INFO("HttpServer %s starts listenning on %s \n", server_.name(), server_.inPort());
+    LOG_INFO("HttpServer %s starts listenning on %s \n", server_.name().c_str(), server_.ipPort().c_str());
     server_.start();
 }
 
@@ -49,8 +49,8 @@ void HttpServer::onMessage(const TcpConnectionPtr& conn,
                             Buffer* buf,
                             Timestamp receiveTime)
 {
-    HttpContext* context = std::any_cast<HttpContext>(conn->getMutableContext());
-
+    HttpContext* context = conn->getMutableContext();
+    std::cout << buf->retrieveAllAsString()<< "\n" << std::endl;
     if(!context->parseRequest(buf, receiveTime))
     {
         conn->send("HTTP/1.1 400 Bad Request\r\n\r\n");

@@ -226,3 +226,36 @@ CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o: ../src/noncopyable.h
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o: ../src/Timestamp.cpp
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o: ../src/Timestamp.h
 
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/Buffer.h
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/http/HttpContext.cpp
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/http/HttpContext.h
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/http/HttpRequest.h
+
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/Buffer.h
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/http/HttpResponse.cpp
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/http/HttpResponse.h
+
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Acceptor.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Buffer.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Callbacks.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Channel.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/CurrentThread.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/EventLoop.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/EventLoopThreadPool.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/InetAddress.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Logger.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Socket.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/TcpConnection.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/TcpServer.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Timer.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/TimerId.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/TimerQueue.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/http/HttpContext.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/http/HttpRequest.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/http/HttpResponse.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/http/HttpServer.cpp
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/http/HttpServer.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o: ../src/noncopyable.h
+

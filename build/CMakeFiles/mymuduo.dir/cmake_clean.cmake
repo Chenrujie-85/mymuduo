@@ -23,6 +23,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/mymuduo.dir/src/Timer.cpp.o"
   "CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o"
   "CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o"
+  "CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o"
+  "CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o"
+  "CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

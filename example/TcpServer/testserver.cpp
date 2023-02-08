@@ -41,6 +41,17 @@ private:
         if(conn->connected())
         {
             LOG_INFO("CONN UP : %s", conn->peerAddress().toIpPort().c_str());
+            while(1)
+            {
+                string s;
+                cin >> s;
+                conn->send(s+" \n");
+                if(s == "exit")
+                {
+                    conn->shutdown();
+                    break;
+                }
+            }
         }
         else
         {
@@ -57,17 +68,17 @@ private:
         if(msg.substr(0, msg.size()-2) == "hello")
         {
             //conn->send("hello \n");
-            conn->send("what do you want to do \n");
+            conn->send("hello \n");
         }
         else if(msg.substr(0, msg.size()-2) == "bye")
         {
             conn->send("good bye \n");
             conn->shutdown(); //写端 EPOLLHUP=>closeCallback_
         }
-        else
-        {
-            conn->send("what do you want to do \n");
-        }
+        // else
+        // {
+        //     conn->send("what do you want to do \n");
+        // }
     }
 
     void onWriteComplete(const TcpConnectionPtr& conn)

@@ -226,3 +226,36 @@ CMakeFiles/mymuduo.dir/src/TimerQueue.cpp.o
 CMakeFiles/mymuduo.dir/src/Timestamp.cpp.o
  /home/nagomi/mymuduo/src/Timestamp.cpp
  /home/nagomi/mymuduo/src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o
+ /home/nagomi/mymuduo/src/Buffer.h
+ /home/nagomi/mymuduo/src/Timestamp.h
+ /home/nagomi/mymuduo/src/http/HttpContext.cpp
+ /home/nagomi/mymuduo/src/http/HttpContext.h
+ /home/nagomi/mymuduo/src/http/HttpRequest.h
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o
+ /home/nagomi/mymuduo/src/Buffer.h
+ /home/nagomi/mymuduo/src/http/HttpResponse.cpp
+ /home/nagomi/mymuduo/src/http/HttpResponse.h
+CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o
+ /home/nagomi/mymuduo/src/Acceptor.h
+ /home/nagomi/mymuduo/src/Buffer.h
+ /home/nagomi/mymuduo/src/Callbacks.h
+ /home/nagomi/mymuduo/src/Channel.h
+ /home/nagomi/mymuduo/src/CurrentThread.h
+ /home/nagomi/mymuduo/src/EventLoop.h
+ /home/nagomi/mymuduo/src/EventLoopThreadPool.h
+ /home/nagomi/mymuduo/src/InetAddress.h
+ /home/nagomi/mymuduo/src/Logger.h
+ /home/nagomi/mymuduo/src/Socket.h
+ /home/nagomi/mymuduo/src/TcpConnection.h
+ /home/nagomi/mymuduo/src/TcpServer.h
+ /home/nagomi/mymuduo/src/Timer.h
+ /home/nagomi/mymuduo/src/TimerId.h
+ /home/nagomi/mymuduo/src/TimerQueue.h
+ /home/nagomi/mymuduo/src/Timestamp.h
+ /home/nagomi/mymuduo/src/http/HttpContext.h
+ /home/nagomi/mymuduo/src/http/HttpRequest.h
+ /home/nagomi/mymuduo/src/http/HttpResponse.h
+ /home/nagomi/mymuduo/src/http/HttpServer.cpp
+ /home/nagomi/mymuduo/src/http/HttpServer.h
+ /home/nagomi/mymuduo/src/noncopyable.h
