@@ -4,6 +4,8 @@
 #include "unistd.h"
 #include <iostream>
 
+const char Buffer::kCRLF[] = "\r\n";
+
 ssize_t Buffer::readFd(int fd, int* saveErrno)
 {
     char extrabuf[65536] = {0};//栈上的buf

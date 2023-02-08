@@ -15,6 +15,10 @@
 /home/nagomi/mymuduo/include/mymuduo/TcpClient.h
 /home/nagomi/mymuduo/include/mymuduo/SocketsOps.h
 /home/nagomi/mymuduo/include/mymuduo/Timestamp.h
+/home/nagomi/mymuduo/include/mymuduo/http/HttpResponse.h
+/home/nagomi/mymuduo/include/mymuduo/http/HttpServer.h
+/home/nagomi/mymuduo/include/mymuduo/http/HttpRequest.h
+/home/nagomi/mymuduo/include/mymuduo/http/HttpContext.h
 /home/nagomi/mymuduo/include/mymuduo/TcpServer.h
 /home/nagomi/mymuduo/include/mymuduo/EventLoopThread.h
 /home/nagomi/mymuduo/include/mymuduo/Callbacks.h

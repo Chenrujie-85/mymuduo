@@ -15,6 +15,7 @@
 #include "Buffer.h"
 #include "TcpConnection.h"
 
+
 class TcpServer : noncopyable
 {
 public:
@@ -37,6 +38,12 @@ public:
     void setThreadNum(int numThreads);
 
     void start();
+
+    EventLoop* getLoop() const { return loop_; }
+
+    const std::string& ipPort() const { return ipPort_; }
+    const std::string& name() const { return name_; }
+
 private:
     void newConnection(int sockfd, const InetAddress &peerAddr);
     void removeConnection(const TcpConnectionPtr &conn);

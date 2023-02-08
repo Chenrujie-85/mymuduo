@@ -2,8 +2,21 @@
 
 #include <vector>
 #include <string>
+#include <algorithm>
 
 // 网络库底层的缓冲器类型定义
+
+/// A buffer class modeled after org.jboss.netty.buffer.ChannelBuffer
+///
+/// @code
+/// +-------------------+------------------+------------------+
+/// | prependable bytes |  readable bytes  |  writable bytes  |
+/// |                   |     (CONTENT)    |                  |
+/// +-------------------+------------------+------------------+
+/// |                   |                  |                  |
+/// 0      <=      readerIndex   <=   writerIndex    <=     size
+/// @endcode
+
 class Buffer
 {
 public:
@@ -48,6 +61,13 @@ public:
         }
     }
 
+    void retrieveUntil(const char* end)
+    {
+        //assert(peek() <= end);
+        //assert(end <= beginWrite());
+        retrieve(end - peek());
+    }
+
     void retrieveAll()
     {
         readerIndex_ = kCheapPrepend;
@@ -73,6 +93,30 @@ public:
         {
             makeSpace(len); //扩容函数
         }
+    }
+
+    const char* findCRLF() const
+    {
+        const char* crlf = std::search(peek(), beginWrite(), kCRLF, kCRLF+2);
+        return crlf == beginWrite() ? NULL : crlf;
+    }
+
+    const char* findCRLF(const char* start) const
+    {
+        // assert(peek() <= start);
+        // assert(start <= beginWrite());
+        const char* crlf = std::search(start, beginWrite(), kCRLF, kCRLF+2);
+        return crlf == beginWrite() ? NULL : crlf;
+    }
+
+    void append(const char *data)
+    {
+        append(static_cast<std::string>(data));
+    }
+
+    void append(const std::string& data)
+    {
+        append(data.c_str(), data.size());
     }
 
     void append(const char *data, size_t len)
@@ -125,4 +169,6 @@ private:
     std::vector<char> buffer_;
     size_t readerIndex_;
     size_t writerIndex_;
+
+    static const char kCRLF[];
 };

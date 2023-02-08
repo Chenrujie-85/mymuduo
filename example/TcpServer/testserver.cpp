@@ -24,6 +24,10 @@ public:
             std::bind(&EchoServer::onMessage, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3)
         );
 
+        server_.setWriteCompleteCallback(
+            std::bind(&EchoServer::onWriteComplete, this, std::placeholders::_1)
+        );
+
         server_.setThreadNum(3);
     }
 
@@ -64,6 +68,11 @@ private:
         {
             conn->send("what do you want to do \n");
         }
+    }
+
+    void onWriteComplete(const TcpConnectionPtr& conn)
+    {
+        cout<<"writecomplete"<<endl;
     }
     EventLoop *loop_;
     TcpServer server_;

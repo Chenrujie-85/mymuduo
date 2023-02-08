@@ -47,6 +47,8 @@ vector
 -
 string
 -
+algorithm
+-
 
 /home/nagomi/mymuduo/src/Callbacks.h
 functional
@@ -381,6 +383,8 @@ netinet/tcp.h
 -
 
 /home/nagomi/mymuduo/src/TcpConnection.h
+./http/HttpContext.h
+/home/nagomi/mymuduo/src/http/HttpContext.h
 noncopyable.h
 /home/nagomi/mymuduo/src/noncopyable.h
 memory
@@ -530,6 +534,18 @@ time.h
 
 /home/nagomi/mymuduo/src/Timestamp.h
 iostream
+-
+
+/home/nagomi/mymuduo/src/http/HttpContext.h
+HttpRequest.h
+/home/nagomi/mymuduo/src/http/HttpRequest.h
+
+/home/nagomi/mymuduo/src/http/HttpRequest.h
+../Timestamp.h
+/home/nagomi/mymuduo/src/Timestamp.h
+map
+-
+stdio.h
 -
 
 /home/nagomi/mymuduo/src/noncopyable.h

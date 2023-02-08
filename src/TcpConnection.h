@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./http/HttpContext.h"
 #include "noncopyable.h"
 #include <memory>
 #include <string>
@@ -38,6 +39,7 @@ public:
     bool connected() const { return state_ == kConnected; }
     
     void send(const std::string &buf);
+    void send(Buffer* message);
     void shutdown();
 
     void forceClose();
@@ -60,6 +62,11 @@ public:
     void connectEstablished();
     void connectDestroyed();
 
+    void setContext(const HttpContext& context)
+    { context_ = context; }
+
+    HttpContext* getMutableContext()
+    { return &context_; }
 private:
     enum StateE {kDisconnected, kConnecting, kConnected, kDisconnecting};
     void setState(StateE state) { state_ = state; }
@@ -94,4 +101,6 @@ private:
 
     Buffer inputBuffer_;//接收数据的缓冲区
     Buffer outputBuffer_;//发送数据的缓冲区
+
+    HttpContext context_;
 };

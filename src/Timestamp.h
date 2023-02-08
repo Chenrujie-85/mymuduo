@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+
 class Timestamp{
 public:
     Timestamp();
@@ -16,6 +17,11 @@ public:
     bool valid() const { return microSecondsSinceEpoch_ > 0; }
 
     int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_; }
+
+    void swap(Timestamp& that)
+    {
+        std::swap(microSecondsSinceEpoch_, that.microSecondsSinceEpoch_);
+    }
 
     static const int kMicroSecondsPerSecond = 1000 * 1000;
 private:

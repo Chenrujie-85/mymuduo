@@ -157,6 +157,8 @@ CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Timer.h
 CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TimerId.h
 CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/http/HttpContext.h
+CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/http/HttpRequest.h
 CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Buffer.h
@@ -173,6 +175,8 @@ CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Timer.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/TimerId.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/http/HttpContext.h
+CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/http/HttpRequest.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/Acceptor.h
@@ -192,6 +196,8 @@ CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/Timer.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TimerId.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/TimerQueue.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/http/HttpContext.h
+CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/http/HttpRequest.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o: ../src/noncopyable.h
 
 CMakeFiles/mymuduo.dir/src/Thread.cpp.o: ../src/CurrentThread.h

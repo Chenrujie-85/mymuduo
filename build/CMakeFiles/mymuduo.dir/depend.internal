@@ -158,6 +158,8 @@ CMakeFiles/mymuduo.dir/src/TcpClient.cpp.o
  /home/nagomi/mymuduo/src/TimerId.h
  /home/nagomi/mymuduo/src/TimerQueue.h
  /home/nagomi/mymuduo/src/Timestamp.h
+ /home/nagomi/mymuduo/src/http/HttpContext.h
+ /home/nagomi/mymuduo/src/http/HttpRequest.h
  /home/nagomi/mymuduo/src/noncopyable.h
 CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o
  /home/nagomi/mymuduo/src/Buffer.h
@@ -174,6 +176,8 @@ CMakeFiles/mymuduo.dir/src/TcpConnection.cpp.o
  /home/nagomi/mymuduo/src/TimerId.h
  /home/nagomi/mymuduo/src/TimerQueue.h
  /home/nagomi/mymuduo/src/Timestamp.h
+ /home/nagomi/mymuduo/src/http/HttpContext.h
+ /home/nagomi/mymuduo/src/http/HttpRequest.h
  /home/nagomi/mymuduo/src/noncopyable.h
 CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o
  /home/nagomi/mymuduo/src/Acceptor.h
@@ -193,6 +197,8 @@ CMakeFiles/mymuduo.dir/src/TcpServer.cpp.o
  /home/nagomi/mymuduo/src/TimerId.h
  /home/nagomi/mymuduo/src/TimerQueue.h
  /home/nagomi/mymuduo/src/Timestamp.h
+ /home/nagomi/mymuduo/src/http/HttpContext.h
+ /home/nagomi/mymuduo/src/http/HttpRequest.h
  /home/nagomi/mymuduo/src/noncopyable.h
 CMakeFiles/mymuduo.dir/src/Thread.cpp.o
  /home/nagomi/mymuduo/src/CurrentThread.h
