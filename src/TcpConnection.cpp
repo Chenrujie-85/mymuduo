@@ -92,7 +92,7 @@ void TcpConnection::send(Buffer* buf)
             loop_->runInLoop(std::bind(
                 &TcpConnection::sendInLoop,
                 this,
-                buf->retrieveAllAsString().c_str(),
+                buf->retrieveAllAsString().data(),
                 buf->retrieveAllAsString().size()
             ));
         }

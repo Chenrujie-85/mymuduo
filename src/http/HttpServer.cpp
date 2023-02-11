@@ -50,7 +50,7 @@ void HttpServer::onMessage(const TcpConnectionPtr& conn,
                             Timestamp receiveTime)
 {
     HttpContext* context = conn->getMutableContext();
-    std::cout << buf->retrieveAllAsString()<< "\n" << std::endl;
+    //std::cout << buf->retrieveAllAsString()<< "\n" << std::endl;
     if(!context->parseRequest(buf, receiveTime))
     {
         conn->send("HTTP/1.1 400 Bad Request\r\n\r\n");
@@ -73,6 +73,7 @@ void HttpServer::onRequest(const TcpConnectionPtr& conn, const HttpRequest& req)
     httpCallback_(req, &response);
     Buffer buf;
     response.appendToBuffer(&buf);
+    //std::cout<<buf.retrieveAllAsString()<<std::endl;
     conn->send(&buf);
     if(response.closeConnection())
     {

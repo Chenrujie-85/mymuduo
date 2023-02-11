@@ -233,6 +233,8 @@ CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/http/HttpContext.h
 CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o: ../src/http/HttpRequest.h
 
 CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/Buffer.h
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/Timestamp.h
+CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/http/HttpRequest.h
 CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/http/HttpResponse.cpp
 CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o: ../src/http/HttpResponse.h
 

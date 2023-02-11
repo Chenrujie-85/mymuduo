@@ -234,6 +234,8 @@ CMakeFiles/mymuduo.dir/src/http/HttpContext.cpp.o
  /home/nagomi/mymuduo/src/http/HttpRequest.h
 CMakeFiles/mymuduo.dir/src/http/HttpResponse.cpp.o
  /home/nagomi/mymuduo/src/Buffer.h
+ /home/nagomi/mymuduo/src/Timestamp.h
+ /home/nagomi/mymuduo/src/http/HttpRequest.h
  /home/nagomi/mymuduo/src/http/HttpResponse.cpp
  /home/nagomi/mymuduo/src/http/HttpResponse.h
 CMakeFiles/mymuduo.dir/src/http/HttpServer.cpp.o

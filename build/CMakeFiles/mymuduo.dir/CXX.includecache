@@ -559,9 +559,21 @@ stdio.h
 /home/nagomi/mymuduo/src/http/HttpResponse.cpp
 HttpResponse.h
 /home/nagomi/mymuduo/src/http/HttpResponse.h
+HttpRequest.h
+/home/nagomi/mymuduo/src/http/HttpRequest.h
 ../Buffer.h
 /home/nagomi/mymuduo/src/Buffer.h
 string.h
+-
+iostream
+-
+sys/stat.h
+-
+fcntl.h
+-
+sys/mman.h
+-
+unistd.h
 -
 
 /home/nagomi/mymuduo/src/http/HttpResponse.h

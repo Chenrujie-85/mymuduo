@@ -3,6 +3,7 @@
 #include <map>
 
 class Buffer;
+class HttpRequest;
 
 class HttpResponse
 {
@@ -13,13 +14,20 @@ public:
         k200Ok = 200,
         k301MovedPermanently = 301,
         k400BadRequest = 400,
+        k403ForBidden = 403,
         k404NotFound = 404,
+        k700NoResource = 700,
     };
 
     explicit HttpResponse(bool close)
     : statusCode_(kUnknown),
       closeConnection_(close)
     {
+    }
+
+    void setStatusCode(int code)
+    {
+        setStatusCode(HttpStatusCode(code));
     }
 
     void setStatusCode(HttpStatusCode code)
@@ -44,6 +52,8 @@ public:
     {   body_ = body;   }
 
     void appendToBuffer(Buffer* output) const;
+
+    void addsponse(const HttpRequest req, const std::string& real_file_url);
 private:
     std::map<std::string, std::string> headers_;
     HttpStatusCode statusCode_;
